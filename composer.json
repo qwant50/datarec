@@ -1,0 +1,21 @@
+{
+  "name": "qwant50/datarec",
+  "description": "Datarec.com.ua site",
+  "type": "library",
+
+  "authors": [
+    {
+      "name": "Sergey Malahov",
+      "email": "qwantonline@gmail.com"
+    }
+  ],
+
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Qwant\\": "src/",
+      "Qwant\\Tests\\": "src/tests/"
+    }
+  },
+  "license": "MIT"
+}

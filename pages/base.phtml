@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?php echo $title ?></title>
+    <meta name="description" content="<?php echo $description ?>"/>
+    <meta name="keywords" content="<?php echo $keywords ?>"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/scripts.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+
+<body>
+<div id="wrapper">
+
+    <div id="banner">
+        <div id="banner_left">
+            <h1>Центр Восстановления Данных</h1>
+
+            <h2>Восстанавливаем данных с HDD, SSD, Flash-накопителей.<br>Восстановление данных с RAID массивов.</h2>
+        </div>
+        <div id="contactInfo">
+            <div id="phone"><span>(093) 785-86-32</span><br>(многоканальный)<br><br>Skype: qwant50
+            </div>
+            <div id="adress">г. Харьков, пр. Ленина 48,<br> магазин Enter<br>(м.&nbsp;Ботанический сад)</div>
+        </div>
+    </div>
+
+    <div id="horizontal">
+        <ul id="nav">
+            <li><a href="index.html">главная</a></li>
+            <li><a href="news.html">новости</a></li>
+            <li><a href="articles.html">статьи</a></li>
+            <li><a href="certificates.html">патент</a></li>
+            <li><a href="service.html">СЕРВИС</a></li>
+            <li><a href="price.html">Цены</a></li>
+            <li><a href="photo.html">Фотогалерея</a></li>
+            <li><a href="contacts.html">контакты</a></li>
+        </ul>
+    </div>
+
+    <div id="rightcol">
+
+        <?php
+
+        //если находимся в разделе статьи
+        if ($id == 3 || ($id >= 10 && $id < 20)) {
+            echo '<h2> Последние статьи </h2> ';
+
+            $path = 'articles/articles_table.txt';
+            if (!file_exists($path)) {
+                echo 'File does not exist!';
+            } else {
+                //выводим список статей в правой колонке
+                $lines = explode(PHP_EOL, file_get_contents($path));
+                $count = count($lines);
+                foreach ($lines as $line):
+                    echo '<p align = "left" ><a href = "article' . $count . '.html">' . $line . '</a></p>';
+                    $count--;
+                endforeach;
+
+            };
+        }
+
+        if ($id == 20) {
+            echo '<p align = "center" class="fontLarge"><a href = "poradok_rabot.html" ><b > порядок проведения работ </b><br></a>
+                 /сроки, цена, проверка результата, оплата, доставка /<p><br><img class="devider" />';
+        };
+
+        ?>
+
+
+        <h2>Наши магазины</h2>
+
+        <p><span class="fontLarge">Магазин <span class="enter">Enter</span></span><br>
+            <a href="http://www.enter.biz.ua/">Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые
+                фотоаппараты, оргтехника и т.д.</a></p>
+        <a href="http://www.enter.biz.ua/"><img src="img/enterbaner.jpg" width="265" border="0"
+                                                alt="Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые фотоаппараты, оргтехника и т.д."/></a>
+        <img class="devider"/>
+
+        <p><span class="fontLarge">Магазин <span class="server">СЕРВЕР</span></span><br>
+            <a href="http://server.kh.ua/">Оптово-розничная торговля компьютерной техникой</a></p>
+        <a href="http://server.kh.ua/"><img src="img/serverbaner.jpg" height="50" width="260" border="0"
+                                            alt="Оптово-розничная торговля компьютерной техникой"/></a>
+        <img class="devider"/>
+
+        <p><span class="fontLarge">Компания <span class="dclink">DC-LINK</span></span><br>
+            <a href="http://dclink.com.ua/">компьютеры, комплектующие, сети, цифровая техника</a></p>
+        <a href="http://dclink.com.ua/"><img src="img/dclink54.png" height="50" width="100" border="0"
+                                             alt="компьютеры, комплектующие, сети, цифровая техника"/></a>
+        <img class="devider"/>
+
+
+        <p><span class="fontLarge">Интернет-магазин <span class="cobra">Cobra</span></span><br>
+            <a href="http://cobra.com.ua/">компьютеры и комплектующие</a></p>
+        <a href="http://cobra.com.ua/"><img src="img/cobra54.png" height="50" width="265" border="0"
+                                            alt="компьютеры и комплектующие"/></a>
+        <img class="devider"/>
+
+        <br>
+
+    </div>
+
+    <div id="content">
+        <?php echo $content; ?>
+    </div>
+
+
+    <footer>
+        <p>Логотипы, торговые марки и прочие зарегистрированные знаки принадлежат их правообладателям.
+            <br>
+            © 2009-2016, центр восстановления данных Enter-service.
+        </p>
+    </footer>
+    <div id="counters">
+        <noindex>
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA - 28745264 - 1']);
+                _gaq.push(['_trackPageview']);
+
+                (function () {
+                    var ga = document.createElement('script');
+                    ga.type = 'text / javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        </noindex>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #777;
+    background: url(../img/bg_body.gif) repeat;
+}
+
+#wrapper {
+    width: 1200px;
+    height: auto;
+    text-align: left;
+    background-color: #FFFFFF;
+    margin: 10px auto;
+}
+
+#banner {
+    height: 145px;
+    background: url(../img/banner2.jpg);
+}
+
+#banner_left {
+    width: 600px;
+    float: left;
+    text-align: left;
+    padding: 38px 20px 0 20px;
+}
+
+#banner_left h1 {
+    color: #000066;
+    font-size: 150%;
+    padding: 0 0 0 140px;
+    margin: 0;
+    line-height: 1.4em;
+    letter-spacing: 0px;
+}
+
+#banner_left h2 {
+    color: #003399;
+    font-size: 80%;
+    padding: 0 0 0 141px;
+    margin: 0 0 1px;
+    line-height: 1em;
+    letter-spacing: 0px;
+}
+
+#contactInfo {
+    padding: 40px 23px 0 0px;
+    float: right;
+    width: 390px;
+    font-size: 13px;
+}
+
+#contactInfo #phone {
+    float: left;
+    text-align: right;
+    width: 175px;
+    color: #ed1d24;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+#contactInfo #phone SPAN {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#contactInfo #adress {
+    float: right;
+    width: 190px;
+    color: #003399;
+}
+
+#horizontal {
+    height: 30px;
+    text-align: left;
+    margin: 0;
+    padding: 4px 22px;
+    background: url(../img/menu_bg2.jpg) no-repeat 0px;
+}
+
+ul#nav {
+    font-size: 80%;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 0;
+    line-height: 0.8em;
+
+}
+
+#nav li {
+    display: inline;
+    margin: 0px;
+    padding: 0px 30px 0px 17px;
+    line-height: 0.8em;
+    list-style-type: none;
+    background: url(../img/menu_marker.gif) no-repeat 0px;
+}
+
+#nav a {
+    top: -1px;
+    text-decoration: none;
+}
+
+#nav a:link, #nav a:visited {
+    color: #fff;
+    background-color: transparent;
+}
+
+#nav a:hover, #nav li:hover {
+    color: #ff5b5f;
+}
+
+#rightcol {
+    width: 265px;
+    float: right;
+    font-size: 90%;
+    text-align: center;
+    margin: 15px 0px;
+    padding: 0px 15px;
+    border-left: #BFBFBF 1px dashed;
+
+}
+
+#rightcol ul {
+    font-weight: bold;
+    margin: 0 0 10px 10px;
+    padding: 5px 0 0 5px;
+    border-top: #bbb 1px solid;
+    text-decoration: none;
+    list-style-type: square;
+}
+
+#rightcol li {
+    padding: 0 0 5px 10px;
+    margin: 0 0 5px 0;
+    border-bottom: #bbb 1px solid;
+    text-decoration: none;
+}
+
+#rightcol p {
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+#rightcol p.text {
+    font-size: 80%;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.devider {
+    margin: 10px 0px;
+    border: 0;
+    height: 1px;
+    width: 261px;
+    background: url(../img/right_delim.gif);
+}
+
+#content {
+    margin-right: 295px;
+    border-right: #BFBFBF 1px dashed;
+}
+
+#content ul {
+    font-size: 80%;
+    margin: 0 30px;
+}
+
+html p {
+    font-size: 80%;
+    margin: 15px;
+}
+
+ul {
+    font-size: 80%;
+    margin: 0 25px;
+}
+
+strong {
+    color: #039;
+}
+
+h2 {
+    font-size: 100%;
+    color: #900;
+    padding: 0;
+    margin: 20px;
+}
+
+a {
+    color: #0000FF;
+
+}
+
+a:visited {
+    color: #777777;
+
+}
+
+a:active {
+    color: #999;
+
+}
+
+a:hover {
+    color: #999;
+
+}
+
+footer {
+
+    height: 85px;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    background: url(../img/footer2.jpg) no-repeat;
+
+}
+
+footer p {
+    font-size: 70%;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0 0 0;
+}
+
+.rightimage {
+    float: right;
+    margin-left: 10px;
+}
+
+.leftimage {
+    float: left;
+    margin-right: 10px;
+}
+
+/* #####################                PRICE TABLICA                     ##############################*/
+
+th.price {
+    text-align: center;
+}
+
+div#price .description {
+    padding: 0 0 13px;
+    background-color: silver;
+    color: #182c3b;
+}
+
+div#price ul.tab-list {
+    margin: 0px;
+}
+
+div#price ul.tab-list li {
+    background: none;
+    padding: 0px;
+}
+
+div#price ul.tab-list ._1 {
+    width: 119px;
+}
+
+div#price ul.tab-list ._2 {
+    width: 162px;
+}
+
+div#price ul.tab-list ._3 {
+    width: 162px;
+}
+
+div#price div.open-tab {
+    border-bottom: none;
+}
+
+div#price div.tabs {
+    background: no-repeat bottom center;
+    padding-bottom: 46px;
+    border-bottom: 1px solid #dedcdc;
+}
+
+table#price-table {
+    width: 100%;
+    margin: 0 0 40px;
+    border-collapse: collapse;
+    border: 1px solid #dedcdc;
+}
+
+table#price-table td, table#price-table th {
+    border-collapse: collapse;
+    border: 1px solid #C0C0C0;
+    font-size: small;
+}
+
+table#price-table th {
+    height: 20px;
+    color: #393939;
+    background-color: #E0E0E0;
+    vertical-align: middle;
+}
+
+table#price-table .number {
+    width: 11px;
+}
+
+table#price-table .price {
+    width: 103px;
+}
+
+table#price-table .count {
+    width: 58px;
+}
+
+table#price-table th.number, table#price-table th.descr {
+    padding-left: 10px;
+    text-align: left;
+}
+
+table#price-table td.number, table#price-table td.price, table#price-table td.count {
+    text-align: center;
+}
+
+table#price-table td.price, table#price-table td.count {
+    color: #24518a;
+}
+
+table#price-table td {
+    vertical-align: central;
+    padding: 2px 5px;
+
+}
+
+table#price-table a.title {
+    display: inline-block;
+    margin: 0 0 2px;
+}
+
+table#price-table span.title {
+    display: inline-block;
+    margin: 0 0 2px;
+    color: #646e76;
+}
+
+table#price-table td.count .total {
+    display: inline-block;
+    padding: 1px 5px 2px;
+    word-spacing: 10px;
+    background: #f6f6f8;
+    border: 0px solid #dedcdc;
+}
+
+table#price-table td.count input.pricelist_count {
+    background: none;
+    border: none;
+    width: 17px;
+    float: left;
+    color: inherit;
+}
+
+div#price ul.note-list {
+    margin: 0 0 38px;
+}
+    
+.fontLarge {
+    font-size: x-large;
+}
+
+.enter{
+    color: #0000FF;
+    font-style: italic;
+}
+
+.server {
+    color: #FF0033;
+}
+
+.dclink {
+    color: #2A166F;
+}
+
+.cobra{
+    color: #82C302;
+}
