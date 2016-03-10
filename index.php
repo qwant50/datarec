@@ -1,6 +1,7 @@
 <?php
 
 use Qwant\Router;
+use Qwant\MainController;
 use Qwant\View;
 
 
@@ -11,8 +12,15 @@ define("ROOT", realpath(__DIR__) . DIRECTORY_SEPARATOR);
 require __DIR__ . '/vendor/autoload.php';
 
 $router = new Router();
-$view = new View();
+$router->init($_SERVER["REQUEST_URI"]);
 
-$view->render(ROOT . 'pages/base.phtml', $router->init($_SERVER["REQUEST_URI"]));
+$controllerName = 'Qwant\\' . $router->getController() . 'Controller';
+if (class_exists($controllerName)) {
+    $controller = new $controllerName;
+}
+$actionName = $router->getAction() . 'Action';
+$controller->$actionName($router->getId());
+
+
 
 
