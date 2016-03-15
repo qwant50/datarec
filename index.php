@@ -17,9 +17,10 @@ $router->init($_SERVER["REQUEST_URI"]);
 $controllerName = 'Qwant\\' . $router->getController() . 'Controller';
 if (class_exists($controllerName)) {
     $controller = new $controllerName;
+    $actionName = $router->getAction() . 'Action';
+    $controller->$actionName($router->getId());
 }
-$actionName = $router->getAction() . 'Action';
-$controller->$actionName($router->getId());
+
 
 
 

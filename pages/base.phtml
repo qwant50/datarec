@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $title ?></title>
-    <meta name="description" content="<?php echo $description ?>"/>
-    <meta name="keywords" content="<?php echo $keywords ?>"/>
+    <title><?= $title ?></title>
+    <meta name="description" content="<?= $description ?>"/>
+    <meta name="keywords" content="<?= $keywords ?>"/>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="scripts/scripts.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
@@ -105,14 +104,14 @@
     </div>
 
     <div id="content">
-        <?php echo $content; ?>
+        <?= $content; ?>
     </div>
 
 
     <footer>
         <p>Логотипы, торговые марки и прочие зарегистрированные знаки принадлежат их правообладателям.
             <br>
-            © 2009-2016, центр восстановления данных Enter-service.
+            © 2009-<?= date('Y') ?>, центр восстановления данных Enter-service.
         </p>
     </footer>
     <div id="counters">
@@ -135,6 +134,8 @@
     </div>
 
 </div>
+
+<script src="scripts/scripts.js"></script>
 
 </body>
 </html>
