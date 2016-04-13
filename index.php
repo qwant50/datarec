@@ -5,8 +5,8 @@ use Qwant\MainController;
 use Qwant\View;
 
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 define("ROOT", realpath(__DIR__) . DIRECTORY_SEPARATOR);
 require __DIR__ . '/vendor/autoload.php';
@@ -20,8 +20,3 @@ if (class_exists($controllerName)) {
     $actionName = $router->getAction() . 'Action';
     $controller->$actionName($router->getId());
 }
-
-
-
-
-

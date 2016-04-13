@@ -4,12 +4,11 @@ namespace Qwant;
 
 class View
 {
-    public function render($template, array $data)
+    public function render($template, array $data = array ())
     {
-        extract($data);
+       // var_dump($data['content']);
 
-        $content = file_get_contents($content);
-
+        $data['content'] = file_get_contents($data['content']);
         echo include $template;
     }
 }

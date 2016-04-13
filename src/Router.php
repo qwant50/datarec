@@ -10,7 +10,7 @@ class Router
 
     public function init($url)
     {
-        $url = ltrim($url, '/');
+        $url = ltrim(trim($url), '/');
 
         $pages = array(
             'index.html' => array('id' => 1, 'controller' => 'main', 'action' => 'default'),
@@ -37,7 +37,6 @@ class Router
             'vosstanovlenie_ssd.html' => array('id' => 21, 'controller' => 'main', 'action' => 'default'),
             'poradok_rabot.html' => array('id' => 25, 'controller' => 'main', 'action' => 'default'),
         );
-
         if (isset($pages[$url])) {
             $this->controller = $pages[$url]['controller'];
             $this->action = $pages[$url]['action'];

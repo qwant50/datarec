@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $title ?></title>
-    <meta name="description" content="<?= $description ?>"/>
-    <meta name="keywords" content="<?= $keywords ?>"/>
+    <title><?= $data['title'] ?></title>
+    <meta name="description" content="<?= $data['description'] ?>"/>
+    <meta name="keywords" content="<?= $data['keywords'] ?>"/>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
@@ -43,20 +43,18 @@
     <div id="rightcol">
 
         <?php
-
+        $id = $data['id'];
         //если находимся в разделе статьи
         if ($id == 3 || ($id >= 10 && $id < 20)) {
-            echo '<h2> Последние статьи </h2> ';
+            echo '<h2> Последние статьи </h2>';
 
             $path = 'articles/articles_table.txt';
-            if (!file_exists($path)) {
-                echo 'File does not exist!';
-            } else {
+            if (file_exists($path)) {
                 //выводим список статей в правой колонке
                 $lines = explode(PHP_EOL, file_get_contents($path));
                 $count = count($lines);
                 foreach ($lines as $line):
-                    echo '<p align = "left" ><a href = "article' . $count . '.html">' . $line . '</a></p>';
+                    printf('<p align = "left" ><a href = "article%d.html">' . $line . '</a></p>', $count);
                     $count--;
                 endforeach;
 
@@ -104,10 +102,10 @@
     </div>
 
     <div id="content">
-        <?= $content; ?>
+        <?= $data['content']; ?>
     </div>
 
-
+    <div style="clear:both"></div>
     <footer>
         <p>Логотипы, торговые марки и прочие зарегистрированные знаки принадлежат их правообладателям.
             <br>
