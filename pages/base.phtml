@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $data['title'] ?></title>
-    <meta name="description" content="<?= $data['description'] ?>"/>
-    <meta name="keywords" content="<?= $data['keywords'] ?>"/>
+    <title><?= $title ?></title>
+    <meta name="description" content="<?= $description ?>"/>
+    <meta name="keywords" content="<?= $keywords ?>"/>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/scripts.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
@@ -21,13 +22,13 @@
             <h2>Восстанавливаем данных с HDD, SSD, Flash-накопителей.<br>Восстановление данных с RAID массивов.</h2>
         </div>
         <div id="contactInfo">
-            <div id="phone"><span>(093) 785-86-32</span><br>(многоканальный)<br><br>Skype: qwant50
+            <div id="phone"><span>(095) 432-00-06</span><br>(многоканальный)<br><br>Skype: qwant50
             </div>
             <div id="adress">г. Харьков, пр. Ленина 48,<br> магазин Enter<br>(м.&nbsp;Ботанический сад)</div>
         </div>
     </div>
 
-    <div id="horizontal">
+    <nav id="horizontal">
         <ul id="nav">
             <li><a href="index.html">главная</a></li>
             <li><a href="news.html">новости</a></li>
@@ -38,23 +39,25 @@
             <li><a href="photo.html">Фотогалерея</a></li>
             <li><a href="contacts.html">контакты</a></li>
         </ul>
-    </div>
+    </nav>
 
     <div id="rightcol">
 
         <?php
-        $id = $data['id'];
+
         //если находимся в разделе статьи
         if ($id == 3 || ($id >= 10 && $id < 20)) {
             echo '<h2> Последние статьи </h2>';
 
             $path = 'articles/articles_table.txt';
-            if (file_exists($path)) {
+            if (!file_exists($path)) {
+                echo '<p>Пока статей нет.</p>';
+            } else {
                 //выводим список статей в правой колонке
-                $lines = explode(PHP_EOL, file_get_contents($path));
+                $lines = array_map('rtrim', file($path));
                 $count = count($lines);
                 foreach ($lines as $line):
-                    printf('<p align = "left" ><a href = "article%d.html">' . $line . '</a></p>', $count);
+                	printf('<p class = "left" ><a href = "article%u.html">%s</a></p>', $count, $line);
                     $count--;
                 endforeach;
 
@@ -102,10 +105,10 @@
     </div>
 
     <div id="content">
-        <?= $data['content']; ?>
+        <?= $content; ?>
     </div>
 
-    <div style="clear:both"></div>
+
     <footer>
         <p>Логотипы, торговые марки и прочие зарегистрированные знаки принадлежат их правообладателям.
             <br>
@@ -114,26 +117,20 @@
     </footer>
     <div id="counters">
         <noindex>
-            <script type="text/javascript">
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', 'UA - 28745264 - 1']);
-                _gaq.push(['_trackPageview']);
+         <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                (function () {
-                    var ga = document.createElement('script');
-                    ga.type = 'text / javascript';
-                    ga.async = true;
-                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(ga, s);
-                })();
-            </script>
+  ga('create', 'UA-28745264-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
         </noindex>
     </div>
 
 </div>
-
-<script src="scripts/scripts.js"></script>
 
 </body>
 </html>
