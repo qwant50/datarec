@@ -6,9 +6,10 @@ class View
 {
     public function render($template, array $data = array ())
     {
-       // var_dump($data['content']);
-
+        //var_dump($data['content']);
         $data['content'] = file_get_contents($data['content']);
-        echo include $template;
+        ob_start();
+        include $template;
+        echo ob_get_clean();
     }
 }

@@ -56,7 +56,6 @@ class MainController
         $this->data['content'] = $articles[$id];
         $this->data['id'] = $id;
         $this->setMeta($id);
-
         $this->view->render(ROOT . 'pages/base.phtml', $this->data);
     }
 }

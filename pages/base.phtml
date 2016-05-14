@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $title ?></title>
-    <meta name="description" content="<?= $description ?>"/>
-    <meta name="keywords" content="<?= $keywords ?>"/>
+    <title><?= $data['title'] ?></title>
+    <meta name="description" content="<?= $data['description'] ?>"/>
+    <meta name="keywords" content="<?= $data['keywords'] ?>"/>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
@@ -21,8 +21,7 @@
             <h2>Восстанавливаем данных с HDD, SSD, Flash-накопителей.<br>Восстановление данных с RAID массивов.</h2>
         </div>
         <div id="contactInfo">
-            <div id="phone"><span>(095) 432-00-06</span><br>(многоканальный)<br><br>Skype: qwant50
-            </div>
+            <div id="phone"><span>(095) 432-00-06</span><br>(многоканальный)<br><br>Skype: qwant50</div>
             <div id="adress">г. Харьков, пр. Ленина 48,<br> магазин Enter<br>(м.&nbsp;Ботанический сад)</div>
         </div>
     </div>
@@ -45,7 +44,7 @@
         <?php
 
         //если находимся в разделе статьи
-        if ($id == 3 || ($id >= 10 && $id < 20)) {
+        if ($data['id'] == 3 || ($data['id'] >= 10 && $data['id'] < 20)) {
             echo '<h2> Последние статьи </h2>';
 
             $path = 'articles/articles_table.txt';
@@ -63,7 +62,7 @@
             };
         }
 
-        if ($id == 20) {
+        if ($data['id'] == 20) {
             echo '<p align = "center" class="fontLarge"><a href = "poradok_rabot.html" ><b > порядок проведения работ </b><br></a>
                  /сроки, цена, проверка результата, оплата, доставка /<p><br><img class="devider" />';
         };
@@ -104,7 +103,7 @@
     </div>
 
     <div id="content">
-        <?= $content; ?>
+        <?= $data['content']; ?>
     </div>
 
 
