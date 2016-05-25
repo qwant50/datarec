@@ -12,24 +12,15 @@
 <p align="justify">USB Flash и SD-карты имеют схожую электронную начинку и состоят из:<br>
 
 <div align=center>
-    <TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
-        <tr>
-            <td><img src="/cnt/flash.png" alt="А вот оно..." width="526" height="345" border="0"></td>
-        </tr>
-    </table>
+    <img src="/cnt/flash.png" alt="А вот оно..." width="526" height="345" border="0">
 </div>
 <div align=center><FONT SIZE="1"><b>Состав и конструкция USB flash-накопителя.</b></FONT></div>
 
 
-<p align="justify">В разобранном состоянии они выглядят так:<br/>
+<p align="justify">В разобранном состоянии они выглядят так:<br>
 
 <div align=center>
-    <TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
-        <tr>
-            <td><img src="/cnt/flash.jpg" alt="USB flash в разобранном состоянии" width="480" height="360"
-                     border="0"></td>
-        </tr>
-    </table>
+    <img src="/cnt/flash.jpg" alt="USB flash в разобранном состоянии" width="480" height="360" border="0">
 </div>
 <div align=center><FONT SIZE="1"><b>USB flash-накопитель (разобран).</b></FONT></div>
 
@@ -55,12 +46,7 @@
     структуре хранимой информации.<br>
 
 <div align=center>
-    <TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
-        <tr>
-            <td><img src="/cnt/reader.jpg" alt="Устройство считывания данных из NAND flash-памяти."
-                     width="440" height="272" border="0"></td>
-        </tr>
-    </table>
+    <img src="/cnt/reader.jpg" alt="Устройство считывания данных из NAND flash-памяти." width="440" height="272" border="0">
 </div>
 <div align=center><FONT SIZE="1"><b>Устройство считывания данных из NAND flash-памяти.</b></FONT></div>
 
@@ -85,13 +71,8 @@
     значительную часть действий в автоматическом режиме, а при невозможности – использует специальный инструментарий для ручного восстановления.<br>
 
 <div align=center>
-    <TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
-        <tr>
-            <td><img src="/cnt/pc3000flash.png"
-                     alt="Специализированное ПО для логического восстановления данных с flash-накопителей."
-                     width="536" height="409" border="0"></td>
-        </tr>
-    </table>
+    <img src="/cnt/pc3000flash.png" alt="Специализированное ПО для логического восстановления данных с flash-накопителей."
+         width="536" height="409" border="0">
 </div>
 <div align=center><FONT SIZE="1"><b>Специализированное ПО для логического восстановления данных с flash-накопителей.</b></FONT></div>
 
