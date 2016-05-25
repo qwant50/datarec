@@ -2,50 +2,50 @@
 <p align="left">Предлагаем Вам ознакомиться с результатами тестирования популярных и самыйх новейших HDD:</p>
 <p align="right">Таблица 1 - Сводная таблица результатов тестирования</p>
 <p align="center">
-<img src="articles/article1/hddtable1.png" height="229" width="645" border="0" target="_blank" />
+<img src="articles/article1/hddtable1.png" height="229" width="645" border="0" />
 </p>
-<br/>
+<br>
 <p align="right">Таблица 2 - Средняя скорость линейного чтения/записи</p>
 <p align="center">
-<img src="articles/article1/hddtable2.png" height="529" width="553" border="0" target="_blank" />
+<img src="articles/article1/hddtable2.png" height="529" width="553" border="0" />
 </p>
 <p align="justify">
    Как видим, первые 3 места уверенно захватили накопители Samsung. 
    Первые два созданы с использованием 3х пластин емкостью 333GB/пластина и скоростью вращения шпинделя 7200 оборотов. 
    Накопитель Samsung HD753LJ показывает значительный отрыв от своего брата близнеца HD103UJ в силу того, что он является обрезком от терабайтовой версии (что хорошо видно на следующих диаграммах):</p>
 <p align="center">
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD103UJ_read.png" height="496" width="572" border="0" target="_blank" />
-<br/><br/><br/>
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD103UJ_write.png" height="496" width="572" border="0" target="_blank" />
-<br/><br/><br/>
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD753LJ_read.png" height="496" width="572" border="0" target="_blank" />
-<br/><br/><br/>
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD753LJ_write.png" height="496" width="572" border="0" target="_blank" />
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD103UJ_read.png" height="496" width="572" border="0" />
+<br><br><br>
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD103UJ_write.png" height="496" width="572" border="0" />
+<br><br><br>
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD753LJ_read.png" height="496" width="572" border="0"  />
+<br><br><br>
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD753LJ_write.png" height="496" width="572" border="0"  />
 </p>
 <p align="justify">
    К сожалению это сказывается на его надежности. По нашей статистике, процент брака по  накопителю HD750LJ составляет более 5% что является очень плохим результатом. 
    И хоть он и является лидером по скорости линейного чтения/записи - мы не рекомендуем его к покупке.
    А вот в качестве емкого и производительного винта можно смело брать HD103UJ. процент брака по нему как и по остальным накопителям использованных в 
    тесте не превышает 1% - что является отличным результатом.
-   <br/><br/>
+   <br><br>
    Особый интерес для нас представлял накопитель Samsung HD502HI, ведь его изюминкой является одноблинная конструкция с плотностью записи 500GB на пластину и 
    скоростью вращения шпиндиля 5400 оборотов.
    Его скоростные характеристики предсталены на следующих диаграммах:
-   <br/> 
+   <br>
 </p>
 <p align="center">
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502HI_read.jpg" height="496" width="572" border="0" target="_blank" />
-<br/><br/><br/>
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502HI_write.jpg" height="496" width="572" border="0" target="_blank" />
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502HI_read.jpg" height="496" width="572" border="0" />
+<br><br><br>
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502HI_write.jpg" height="496" width="572" border="0" />
 </p>
 <p align="justify">
    И для сравнения, его предшественник Samsung HD502IJ (2 пластины, 7200 оборотов):
-   <br/> 
+   <br>
 </p>
 <p align="center">
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502IJ_read.png" height="496" width="572" border="0" target="_blank" />
-<br/><br/><br/>
-<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502IJ_write.png" height="496" width="572" border="0" target="_blank" />
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502IJ_read.png" height="496" width="572" border="0" />
+<br><br><br>
+<img src="articles/article1/HDTune_Benchmark_SAMSUNG_HD502IJ_write.png" height="496" width="572" border="0" />
 </p>
 
 

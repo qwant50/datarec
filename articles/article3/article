@@ -1,120 +1,187 @@
 <p style="background-color:#ECECEC;">12.12.2009 <strong>Экспресс тест адаптера SATA HDD PowerProtector.</strong></p>
 
-<p align="justify">&nbsp;&nbsp;&nbsp;Наверно любой владелец компьютера, а особенно компьютерные энтузиасты  время от времени задаются вопросом выбора не только наиболее быстрого, дешевого  и бесшумного жесткого диска, но и надежного. И во многих случаях именно  параметр надежности выходит на первое место при выборе HDD. Ведь он должен  верой и правдой работать в качестве хранилища наших зачастую бесценных данных.  Это и фотографии и личная переписка и деловые документы (включая бухгалтерию) и  собранная за долгие годы коллекция любимых фильмов и музыки. <br />
+<p align="justify">&nbsp;&nbsp;&nbsp;Наверно любой владелец компьютера, а особенно компьютерные энтузиасты время от времени задаются вопросом выбора
+    не только наиболее быстрого, дешевого и бесшумного жесткого диска, но и надежного. И во многих случаях именно параметр надежности выходит на
+    первое место при выборе HDD. Ведь он должен верой и правдой работать в качестве хранилища наших зачастую бесценных данных. Это и фотографии и
+    личная переписка и деловые документы (включая бухгалтерию) и собранная за долгие годы коллекция любимых фильмов и музыки. <br/>
 
-&nbsp;&nbsp;&nbsp;Но только ли от надежности и качества жесткого диска зависит  то, насколько надежно хранятся наши данные? Нет! Есть еще множество параметров  влияющих на бессбойную работу накопителя. Это и температурный режим, и качество  электропитания, вибрации и т.д.<br />
- И из всех этих параметров наверно наиболее важным является  именно стабильность электропитания. Решением этой проблемы является один  вариант, а именно установка внутри системного блока более мощного,  качественного и соответственно значительно более дорогого блока питания. Но у  этого решения есть 2 существенных недостатка:</p>
+    &nbsp;&nbsp;&nbsp;Но только ли от надежности и качества жесткого диска зависит то, насколько надежно хранятся наши данные? Нет! Есть еще множество
+    параметров влияющих на бессбойную работу накопителя. Это и температурный режим, и качество электропитания, вибрации и т.д.<br/>
+    И из всех этих параметров наверно наиболее важным является именно стабильность электропитания. Решением этой проблемы является один вариант, а
+    именно установка внутри системного блока более мощного, качественного и соответственно значительно более дорогого блока питания. Но у этого
+    решения есть 2 существенных недостатка:</p>
 <ol>
-  <li>Используя более мощный блок питания ни мы, ни  производитель никогда не обращаем внимание на уровень пульсаций по линиям  питания +12 и +5 вольт, а только на нагрузочную способность которую может  выдержать конкретная модель БП. А как показывает практика, чем больше мощность  БП – тем выше уровень пульсаций на выходных линиях мы получаем (о чем  производители БП тихо умалчивают). Получается замкнутый круг, чем более мощный  блок питания мы используем для повышения надежности работы ПК, тем менее  качественное питание мы ему обеспечиваем.</li>
-  <li>В некоторых моделях корпусов у нас просто нет  возможности заменить входящий в комплекте БП (например, HTPC корпуса, чья  популярность в последнее время стремительно растет).</li>
+    <li>Используя более мощный блок питания ни мы, ни производитель никогда не обращаем внимание на уровень пульсаций по линиям питания +12 и +5
+        вольт, а только на нагрузочную способность которую может выдержать конкретная модель БП. А как показывает практика, чем больше мощность БП –
+        тем выше уровень пульсаций на выходных линиях мы получаем (о чем производители БП тихо умалчивают). Получается замкнутый круг, чем более
+        мощный блок питания мы используем для повышения надежности работы ПК, тем менее качественное питание мы ему обеспечиваем.
+    </li>
+    <li>В некоторых моделях корпусов у нас просто нет возможности заменить входящий в комплекте БП (например, HTPC корпуса, чья популярность в
+        последнее время стремительно растет).
+    </li>
 </ol>
-<p align="justify">&nbsp;&nbsp;&nbsp;И вот, в нашу тестовую лабораторию приехал блок электронной защиты жесткого диска - <strong>SATA HDD  PowerProtector adapter (MOLEX -&gt; SATA power)</strong>, призванный не только  решить проблему качественного электропитания жесткого диска в не зависимости от типа и мощности используемого блока питания, но и защитить жесткий диск от ряда  нештатных ситуаций которые, к сожалению, имеют место в процессе работы  компьютера.<br /><br/>
+<p align="justify">&nbsp;&nbsp;&nbsp;И вот, в нашу тестовую лабораторию приехал блок электронной защиты жесткого диска - <strong>SATA HDD
+        PowerProtector adapter (MOLEX -&gt; SATA power)</strong>, призванный не только решить проблему качественного электропитания жесткого диска в
+    не зависимости от типа и мощности используемого блока питания, но и защитить жесткий диск от ряда нештатных ситуаций которые, к сожалению, имеют
+    место в процессе работы компьютера.<br/><br/>
 
-  Адаптер обладает следующими характеристиками:</p>
+    Адаптер обладает следующими характеристиками:</p>
 <ul>
-  <li>защита от скачков напряжения (перенапряжения);</li>
-  <li>фильтрация напряжения качественными НЧ и ВЧ фильтрами;</li>
-  <li>защита от переполюсовки;</li>
-  <li>стабилизация напряжения по линиям +5v и +12v (что уменьшает количество сбоев  возникающих в процессе эксплуатации SATA HDD);</li>
-  <li>светодиодная двухцветовая индикация входных напряжений;</li>
-  <li>выполняет функцию обычного переходника питания molex - &gt; sata.</li>
+    <li>защита от скачков напряжения (перенапряжения);</li>
+    <li>фильтрация напряжения качественными НЧ и ВЧ фильтрами;</li>
+    <li>защита от переполюсовки;</li>
+    <li>стабилизация напряжения по линиям +5v и +12v (что уменьшает количество сбоев возникающих в процессе эксплуатации SATA HDD);</li>
+    <li>светодиодная двухцветовая индикация входных напряжений;</li>
+    <li>выполняет функцию обычного переходника питания molex - &gt; sata.</li>
 </ul>
 
 <br/>
-<div align=center><TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0"><tr><td><a href="photo/PowerProtector.jpg" target="_blank"><img src="photo/PowerProtector.jpg" alt="Блок электронной защиты жесткого диска - SATA HDD PowerProtector адаптер (MOLEX -> SATA power)" width="267" height="186" border="0"></a></td></tr></table></div>
+<div align=center>
+    <TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0">
+        <tr>
+            <td><img src="photo/PowerProtector.jpg"
+                     alt="Блок электронной защиты жесткого диска - SATA HDD PowerProtector адаптер (MOLEX -> SATA power)" width="267" height="186"
+                     border="0"></td>
+        </tr>
+    </table>
+</div>
 <div align=center><FONT SIZE="1" FACE="Verdana,Arial,Helvetica"><b>Нажмите на картинку для увеличения.</b></FONT></div></p>
 
-<p align="justify">&nbsp;&nbsp;&nbsp;Действительно, список характеристик весьма внушительный при  достаточно скромных габаритных размерах (см. фото). И мы решили протестировать  адаптер и выяснить действительно ли он так хорош как заявляет производитель и  если да, то на сколько.<br />
-  Известно, что наиболее тяжелый момент работы жесткого диска  является момент первоначальной раскрутки на штатную скорость (5400 или 7200 в зависимости  от модели HDD), распарковки блока магнитных головок (БМГ) и их вывода на блины.  Не зря производители жестких диском рекомендую минимизировать количество  старт/стопов в процессе эксплуатации накопителя с целью увеличения срока его  работы.<br /><br />
+<p align="justify">&nbsp;&nbsp;&nbsp;Действительно, список характеристик весьма внушительный при достаточно скромных габаритных размерах (см. фото). И
+    мы решили протестировать адаптер и выяснить действительно ли он так хорош как заявляет производитель и если да, то на сколько.<br/>
+    Известно, что наиболее тяжелый момент работы жесткого диска является момент первоначальной раскрутки на штатную скорость (5400 или 7200 в
+    зависимости от модели HDD), распарковки блока магнитных головок (БМГ) и их вывода на блины. Не зря производители жестких диском рекомендую
+    минимизировать количество старт/стопов в процессе эксплуатации накопителя с целью увеличения срока его работы.<br/><br>
 
-  В качестве испытательного оборудования были выбраны:</p>
-			<table cellpadding="2" cellspacing="0"  border="1" bordercolor="#9DAB9F" style="border: 1 solid #9DAB9F;border-collapse:collapse; margin-left: 25px; font-size: 12px;">
+    В качестве испытательного оборудования были выбраны:</p>
+<table cellpadding="2" cellspacing="0" border="1" bordercolor="#9DAB9F"
+       style="border: 1 solid #9DAB9F;border-collapse:collapse; margin-left: 25px; font-size: 12px;">
 
-				<tr>
-				<td>Тип	</td><td>Наименование</td>
-				</tr>
-				<tr>
+    <tr>
+        <td>Тип</td>
+        <td>Наименование</td>
+    </tr>
+    <tr>
 
-					<td>HDD</td><td><b>D154UI</b> (1.5ТB, 5400rpm, 3 пластины)<br /></td>							
-				</tr>
+        <td>HDD</td>
+        <td><b>D154UI</b> (1.5ТB, 5400rpm, 3 пластины)<br/></td>
+    </tr>
 
-				<tr>
-					<td>Блок питания</td><td><b>Chieftec GPS-400AA-101A</b> мощностью 400Ватт*</td>
-				</tr>
-				<tr>
+    <tr>
+        <td>Блок питания</td>
+        <td><b>Chieftec GPS-400AA-101A</b> мощностью 400Ватт*</td>
+    </tr>
+    <tr>
 
-					<td>Цифровой осциллограф</td><td><b>Vellenan instruments HPS-10</b></td>
+        <td>Цифровой осциллограф</td>
+        <td><b>Vellenan instruments HPS-10</b></td>
 
-				</tr>
-			</table>
+    </tr>
+</table>
 
 <p>*на блок подавалась средняя нагрузка при помощи специального испытательного стенда.</p>
 
-<p align="justify">&nbsp;&nbsp;&nbsp;В силу того, что электрические параметры сильно меняются во  времени фотографии осциллограмм являлись не очень наглядным результатом мы  предлагаем ознакомиться с видеосъемкой рзультата тестирования по линии +12вольт без применения адаптера и с ним. </p>
+<p align="justify">&nbsp;&nbsp;&nbsp;В силу того, что электрические параметры сильно меняются во времени фотографии осциллограмм являлись не очень
+    наглядным результатом мы предлагаем ознакомиться с видеосъемкой рзультата тестирования по линии +12вольт без применения адаптера и с ним. </p>
 
 <div align=center>
-			<table cellpadding="2" cellspacing="0"  border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
+    <table cellpadding="2" cellspacing="0" border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
 
-				<tr>
-				<td><b>Тест №1 - старт накопителя БЕЗ PowerProtector адаптера</b></td>
-				</tr>
-				<tr>
+        <tr>
+            <td><b>Тест №1 - старт накопителя БЕЗ PowerProtector адаптера</b></td>
+        </tr>
+        <tr>
 
-					<td><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/mVT6gF2hjaY&hl=ru&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/mVT6gF2hjaY&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object></td>							
-				</tr>
-                        </table>
-<br/>
+            <td>
+                <object width="425" height="344">
+                    <param name="movie" value="http://www.youtube.com/v/mVT6gF2hjaY&hl=ru&fs=1"></param>
+                    <param name="allowFullScreen" value="true"></param>
+                    <param name="allowscriptaccess" value="always"></param>
+                    <embed src="http://www.youtube.com/v/mVT6gF2hjaY&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always"
+                           allowfullscreen="true" width="425" height="344"></embed>
+                </object>
+            </td>
+        </tr>
+    </table>
+    <br>
 
-			<table cellpadding="2" cellspacing="0"  border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
+    <table cellpadding="2" cellspacing="0" border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
 
-				<tr>
-				<td><b>Тест №1 - старт накопителя С PowerProtector адаптером</b></td>
-				</tr>
-				<tr>
+        <tr>
+            <td><b>Тест №1 - старт накопителя С PowerProtector адаптером</b></td>
+        </tr>
+        <tr>
 
-					<td><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/irgSVtpkBSQ&hl=ru&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/irgSVtpkBSQ&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object></td>							
-				</tr>
-                        </table>
-<br/>
+            <td>
+                <object width="425" height="344">
+                    <param name="movie" value="http://www.youtube.com/v/irgSVtpkBSQ&hl=ru&fs=1"></param>
+                    <param name="allowFullScreen" value="true"></param>
+                    <param name="allowscriptaccess" value="always"></param>
+                    <embed src="http://www.youtube.com/v/irgSVtpkBSQ&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always"
+                           allowfullscreen="true" width="425" height="344"></embed>
+                </object>
+            </td>
+        </tr>
+    </table>
+    <br>
 
-			<table cellpadding="2" cellspacing="0"  border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
+    <table cellpadding="2" cellspacing="0" border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
 
-				<tr>
-				<td><b>Тест №2 - старт накопителя БЕЗ PowerProtector адаптера</b></td>
-				</tr>
-				<tr>
+        <tr>
+            <td><b>Тест №2 - старт накопителя БЕЗ PowerProtector адаптера</b></td>
+        </tr>
+        <tr>
 
-					<td><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/eF6_9MpXboA&hl=ru&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/eF6_9MpXboA&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object></td>							
-				</tr>
-                        </table>
-<br/>
+            <td>
+                <object width="425" height="344">
+                    <param name="movie" value="http://www.youtube.com/v/eF6_9MpXboA&hl=ru&fs=1"></param>
+                    <param name="allowFullScreen" value="true"></param>
+                    <param name="allowscriptaccess" value="always"></param>
+                    <embed src="http://www.youtube.com/v/eF6_9MpXboA&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always"
+                           allowfullscreen="true" width="425" height="344"></embed>
+                </object>
+            </td>
+        </tr>
+    </table>
+    <br>
 
-			<table cellpadding="2" cellspacing="0"  border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
+    <table cellpadding="2" cellspacing="0" border="1" bordercolor="#9DAB9F" style="border: 0 ;border-collapse:collapse; font-size: 12px;">
 
-				<tr>
-				<td><b>Тест №2 - старт накопителя С PowerProtector адаптером</b></td>
-				</tr>
-				<tr>
+        <tr>
+            <td><b>Тест №2 - старт накопителя С PowerProtector адаптером</b></td>
+        </tr>
+        <tr>
 
-					<td><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/bzK-KCFukq8&hl=ru&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/bzK-KCFukq8&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object></td>							
-				</tr>
-                        </table>
-<br/>			
+            <td>
+                <object width="425" height="344">
+                    <param name="movie" value="http://www.youtube.com/v/bzK-KCFukq8&hl=ru&fs=1"></param>
+                    <param name="allowFullScreen" value="true"></param>
+                    <param name="allowscriptaccess" value="always"></param>
+                    <embed src="http://www.youtube.com/v/bzK-KCFukq8&hl=ru&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always"
+                           allowfullscreen="true" width="425" height="344"></embed>
+                </object>
+            </td>
+        </tr>
+    </table>
+    <br>
 </div>
 
-<p><b>ВЫВОДЫ</b><br />
-<br/>
-Плюсы</p>
+<p><b>ВЫВОДЫ</b><br>
+    <br>
+    Плюсы</p>
 <ol>
-  <li>Уменьшение уровня пульсаций в 2 раза (а в некоторые  моменты времени и более) действительно является замечательным результатом и мы  можем рекомендовать адаптер к применению вне зависимости от типа и мощности  используемого БП.</li>
-  <li>Легкость установки и совместимость с любыми  блоками питания.</li>
+    <li>Уменьшение уровня пульсаций в 2 раза (а в некоторые моменты времени и более) действительно является замечательным результатом и мы можем
+        рекомендовать адаптер к применению вне зависимости от типа и мощности используемого БП.
+    </li>
+    <li>Легкость установки и совместимость с любыми блоками питания.</li>
 </ol>
 <p>Минусы</p>
 <ol>
-  <li>Может возникнуть проблема установки адаптера в  корпуса, где жесткие диски устанавливаются поперек системного блока.</li>
+    <li>Может возникнуть проблема установки адаптера в корпуса, где жесткие диски устанавливаются поперек системного блока.</li>
 </ol>
-<p align="justify">&nbsp;&nbsp;&nbsp;К сожалению, в связи с ограниченным временем мы не успели  проверить защитные характеристики адаптера, но в ближайшее время проведем и это  тестирование.<br />
-<br/>
-  Выражаем особую благодарность магазину <a href="http://www.enter.biz.ua">«Enter»</a> за  предоставленное оборудование.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;К сожалению, в связи с ограниченным временем мы не успели проверить защитные характеристики адаптера, но в
+    ближайшее время проведем и это тестирование.<br/>
+    <br/>
+    Выражаем особую благодарность магазину <a href="http://www.enter.biz.ua">«Enter»</a> за предоставленное оборудование.</p>
 
-<p align="right" ><b>Qwant & DVSx86 & Arinoy</b></p>
+<p align="right"><b>Qwant & DVSx86 & Arinoy</b></p>
