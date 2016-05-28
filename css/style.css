@@ -71,21 +71,26 @@ h2 {
     font-size: 13px;
 }
 
-#phone {
+#cont {
     float: left;
     text-align: right;
-    width: 175px;
+    width: 180px;
     color: #ed1d24;
     font-weight: bold;
     line-height: 16px;
 }
 
-#phone SPAN {
+#phone {
     font-size: 18px;
     line-height: 24px;
 }
 
-#adress {
+#skype {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#address {
     float: right;
     width: 190px;
     color: #003399;
