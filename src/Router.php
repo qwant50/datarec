@@ -21,13 +21,14 @@ class Router
             'price.html' => array('id' => 7, 'controller' => 'main', 'action' => 'default'),
             'photo.html' => array('id' => 8, 'controller' => 'main', 'action' => 'default'),
 
-            'articles.html' => array('id' => 15, 'controller' => 'main', 'action' => 'article'),
+            'articles.html' => array('id' => 16, 'controller' => 'main', 'action' => 'article'),
             'article1.html' => array('id' => 10, 'controller' => 'main', 'action' => 'article'),
             'article2.html' => array('id' => 11, 'controller' => 'main', 'action' => 'article'),
             'article3.html' => array('id' => 12, 'controller' => 'main', 'action' => 'article'),
             'article4.html' => array('id' => 13, 'controller' => 'main', 'action' => 'article'),
             'article5.html' => array('id' => 14, 'controller' => 'main', 'action' => 'article'),
             'article6.html' => array('id' => 15, 'controller' => 'main', 'action' => 'article'),
+            'article7.html' => array('id' => 16, 'controller' => 'main', 'action' => 'article'),
 
             'vosstanovlenie_flash.html' => array(
                 'id' => 20,
@@ -35,6 +36,7 @@ class Router
                 'action' => 'default'
             ),
             'vosstanovlenie_ssd.html' => array('id' => 21, 'controller' => 'main', 'action' => 'default'),
+            'recovery-data-hdd.html' => array('id' => 22, 'controller' => 'main', 'action' => 'default'),
             'poradok_rabot.html' => array('id' => 25, 'controller' => 'main', 'action' => 'default'),
         );
         if (isset($pages[$url])) {

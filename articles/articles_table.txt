@@ -1,3 +1,4 @@
+07.05.2016 Восстановление данных с Flash накопителей (USB, CompactFlash, SD, microSD, SDHC, MemoryStick...)
 01.03.2013 Восстановление данных с USB Flash.
 29.01.2012 История ремонта внутреннего USB HDD.
 07.04.2011 Я безоговорочно люблю Neo-Flex LCD Arm!

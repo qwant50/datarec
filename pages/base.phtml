@@ -61,7 +61,28 @@
 
             };
         }
+        ?>
+        <img class="devider"/>'
+        <form id="contacts" action="carry" method="post" onsubmit="return send_message(this);">
 
+            <div><input style="width: 100%;" onfocus="if (this.value=='Ваше имя *') this.value='';"
+                        onblur="if (this.value==''){this.value='Ваше имя *'}" type="text" name="name" value="Ваше имя *"></div>
+            <div><input style="width: 100%;" onfocus="if (this.value=='Телефон *') this.value='';"
+                        onblur="if (this.value==''){this.value='Телефон *'}" type="text" name="phone"
+                        value="Контактный телефон *"></div>
+            <div><input style="width: 100%;" onfocus="if (this.value=='e-mail') this.value='';"
+                        onblur="if (this.value==''){this.value='e-mail'}" type="text" name="mail"
+                        value="Контактный e-mail *"></div>
+            <div><textarea style="width: 100%;" onfocus="if (this.value=='Комментарий') this.value='';"
+                           onblur="if (this.value==''){this.value='Комментарий'}" name="text"
+                           rows="6">Комментарий</textarea>
+            </div>
+            <div><span>Поля, помеченные звездочкой <span>*</span> - обязательны для заполнения</span>
+            </div>
+            <div><input type="submit" name="submit" value="Заказать доставку"></div>
+        </form>
+        <img class="devider"/>'
+        <?php
         if ($data['id'] == 20) {
             echo '<p align = "center" class="fontLarge"><a href = "poradok_rabot.html" ><b > порядок проведения работ </b><br></a>
                  /сроки, цена, проверка результата, оплата, доставка /<p><br><img class="devider" />';

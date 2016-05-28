@@ -35,6 +35,7 @@ class MainController
             8 => './cnt/photo',
             20 => './cnt/vosstanovlenie_flash',
             21 => './cnt/vosstanovlenie_ssd',
+            22 => './cnt/recovery-data-hdd',
             25 => './cnt/poradok_rabot',
         );
         $this->data['content'] = $pages[$id];
@@ -52,6 +53,7 @@ class MainController
             13 => './articles/article4/article',
             14 => './articles/article5/article',
             15 => './articles/article6/article',
+            16 => './articles/article7/article',
         );
         $this->data['content'] = $articles[$id];
         $this->data['id'] = $id;
