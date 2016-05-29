@@ -6,6 +6,8 @@
     <meta name="keywords" content="<?= $data['keywords'] ?>"/>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css2" rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
@@ -62,29 +64,19 @@
             };
         }
         ?>
-        <img class="devider"/>'
-        <form id="contacts" action="carry" method="post" onsubmit="return send_message(this);">
+        <img class="devider"/>
+        <form id="contacts" action="delivery.php" method="post" onsubmit="return send_message(this);">
 
-            <div><input style="width: 100%;" onfocus="if (this.value=='Ваше имя *') this.value='';"
-                        onblur="if (this.value==''){this.value='Ваше имя *'}" type="text" name="name" value="Ваше имя *"></div>
-            <div><input style="width: 100%;" onfocus="if (this.value=='Телефон *') this.value='';"
-                        onblur="if (this.value==''){this.value='Телефон *'}" type="text" name="phone"
-                        value="Контактный телефон *"></div>
-            <div><input style="width: 100%;" onfocus="if (this.value=='e-mail') this.value='';"
-                        onblur="if (this.value==''){this.value='e-mail'}" type="text" name="mail"
-                        value="Контактный e-mail *"></div>
-            <div><textarea style="width: 100%;" onfocus="if (this.value=='Комментарий') this.value='';"
-                           onblur="if (this.value==''){this.value='Комментарий'}" name="text"
-                           rows="6">Комментарий</textarea>
-            </div>
-            <div><span>Поля, помеченные звездочкой <span>*</span> - обязательны для заполнения</span>
-            </div>
+            <div><input class="delivery" placeholder="Ваше имя *"></div>
+            <div><input class="delivery" placeholder="Телефон *"></div>
+            <div><input class="delivery" type="text" name="mail" placeholder="e-mail"></div>
+            <div><textarea class="delivery" name="text" rows="6" placeholder="Комментарий"></textarea></div>
             <div><input type="submit" name="submit" value="Заказать доставку"></div>
         </form>
-        <img class="devider"/>'
+        <img class="devider"/>
         <?php
         if ($data['id'] == 20) {
-            echo '<p align = "center" class="fontLarge"><a href = "poradok_rabot.html" ><b > порядок проведения работ </b><br></a>
+            echo '<p align = "center" class="fontLarge"><a href = "poradok_rabot.html" ><b>порядок проведения работ</b><br></a>
                  /сроки, цена, проверка результата, оплата, доставка /<p><br><img class="devider" />';
         };
 
@@ -95,28 +87,28 @@
 
         <p><span class="fontLarge">Магазин <span class="enter">Enter</span></span><br>
             <a href="http://www.enter.biz.ua/">Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые
-                фотоаппараты, оргтехника и т.д.</a></p>
-        <a href="http://www.enter.biz.ua/"><img src="img/enterbaner.jpg" width="265" border="0"
-                                                alt="Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые фотоаппараты, оргтехника и т.д."/></a>
+                фотоаппараты, оргтехника и т.д.</p>
+        <img src="img/enterbaner.jpg" width="265"
+             alt="Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые фотоаппараты, оргтехника и т.д."/></a>
         <img class="devider"/>
 
         <p><span class="fontLarge">Магазин <span class="server">СЕРВЕР</span></span><br>
-            <a href="http://server.kh.ua/">Оптово-розничная торговля компьютерной техникой</a></p>
-        <a href="http://server.kh.ua/"><img src="img/serverbaner.jpg" height="50" width="260" border="0"
-                                            alt="Оптово-розничная торговля компьютерной техникой"/></a>
+            <a href="http://server.kh.ua/">Оптово-розничная торговля компьютерной техникой</p>
+        <img src="img/serverbaner.jpg" height="50" width="260"
+             alt="Оптово-розничная торговля компьютерной техникой"/></a>
         <img class="devider"/>
 
         <p><span class="fontLarge">Компания <span class="dclink">DC-LINK</span></span><br>
-            <a href="http://dclink.com.ua/">компьютеры, комплектующие, сети, цифровая техника</a></p>
-        <a href="http://dclink.com.ua/"><img src="img/dclink54.png" height="50" width="100" border="0"
-                                             alt="компьютеры, комплектующие, сети, цифровая техника"/></a>
+            <a href="http://dclink.com.ua/">компьютеры, комплектующие, сети, цифровая техника</p>
+        <img src="img/dclink54.png" height="50" width="100"
+             alt="компьютеры, комплектующие, сети, цифровая техника"/></a>
         <img class="devider"/>
 
 
         <p><span class="fontLarge">Интернет-магазин <span class="cobra">Cobra</span></span><br>
-            <a href="http://cobra.com.ua/">компьютеры и комплектующие</a></p>
-        <a href="http://cobra.com.ua/"><img src="img/cobra54.png" height="50" width="265" border="0"
-                                            alt="компьютеры и комплектующие"/></a>
+            <a href="http://cobra.com.ua/">компьютеры и комплектующие</p>
+        <img src="img/cobra54.png" height="50" width="265"
+             alt="компьютеры и комплектующие"/></a>
         <img class="devider"/>
 
         <br>
@@ -131,7 +123,8 @@
     <footer>
         <p>Логотипы, торговые марки и прочие зарегистрированные знаки принадлежат их правообладателям.
             <br>
-            © 2009-<?= date('Y') ?>, центр восстановления данных Enter-service.
+            Использование любых материалов, размещённых на сайте, разрешается при условии ссылки на www.datarec.com.ua.<br>
+            © 2009 - <?= date('Y') ?>, центр восстановления данных Enter-service.
         </p>
     </footer>
     <div id="counters">

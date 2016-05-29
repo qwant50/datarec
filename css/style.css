@@ -237,7 +237,7 @@ footer p {
     font-size: 70%;
     color: #fff;
     text-align: center;
-    padding: 15px 0 0 0;
+    padding: 8px 0 0 0;
 }
 
 /* #####################                PRICE TABLICA                     ##############################*/
@@ -393,4 +393,13 @@ th.price {
 
 .left {
     text-align: left;
+}
+
+.delivery {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.font80 {
+    font-size: 80%;
 }
