@@ -30,11 +30,7 @@ class Router
             'article6.html' => array('id' => 15, 'controller' => 'main', 'action' => 'article'),
             'article7.html' => array('id' => 16, 'controller' => 'main', 'action' => 'article'),
 
-            'vosstanovlenie_flash.html' => array(
-                'id' => 20,
-                'controller' => 'main',
-                'action' => 'default'
-            ),
+            'vosstanovlenie_flash.html' => array('id' => 20, 'controller' => 'main', 'action' => 'default'),
             'vosstanovlenie_ssd.html' => array('id' => 21, 'controller' => 'main', 'action' => 'default'),
             'recovery-data-hdd.html' => array('id' => 22, 'controller' => 'main', 'action' => 'default'),
             'poradok_rabot.html' => array('id' => 25, 'controller' => 'main', 'action' => 'default'),
