@@ -34,6 +34,8 @@ class Router
             'vosstanovlenie_ssd.html' => array('id' => 21, 'controller' => 'main', 'action' => 'default'),
             'recovery-data-hdd.html' => array('id' => 22, 'controller' => 'main', 'action' => 'default'),
             'poradok_rabot.html' => array('id' => 25, 'controller' => 'main', 'action' => 'default'),
+
+            'delivery.php' => array('id' => 25, 'controller' => 'ajax', 'action' => 'delivery'),
         );
         if (isset($routes[$url])) {
             $this->controller = $routes[$url]['controller'];
