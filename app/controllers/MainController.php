@@ -1,6 +1,8 @@
 <?php
 
-namespace Qwant;
+namespace Qwant\controllers;
+
+use Qwant\View;
 
 class MainController
 {

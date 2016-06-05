@@ -1,9 +1,8 @@
 <?php
 
 use Qwant\Router;
-use Qwant\MainController;
+use Qwant\controlles\Main;
 use Qwant\View;
-
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -14,9 +13,10 @@ require __DIR__ . '/vendor/autoload.php';
 $router = new Router();
 $router->init($_SERVER["REQUEST_URI"]);
 
-$controllerName = 'Qwant\\' . $router->getController() . 'Controller';
-if (class_exists($controllerName)) {
+$controllerName = 'Qwant\\controllers\\' . $router->getController() . 'Controller';
+
+//if (class_exists($controllerName)) {
     $controller = new $controllerName;
     $actionName = $router->getAction() . 'Action';
     $controller->$actionName($router->getId());
-}
+//}

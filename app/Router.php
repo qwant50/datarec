@@ -4,15 +4,15 @@ namespace Qwant;
 
 class Router
 {
-    private $controller;
-    private $action;
-    private $id;
+    private $controller = 'Main';
+    private $action = 'default';
+    private $id = 1;
 
     public function init($url)
     {
         $url = ltrim(trim($url), '/');
 
-        $pages = array(
+        $routes = array(
             'index.html' => array('id' => 1, 'controller' => 'main', 'action' => 'default'),
             'news.html' => array('id' => 2, 'controller' => 'main', 'action' => 'default'),
             'service.html' => array('id' => 4, 'controller' => 'main', 'action' => 'default'),
@@ -35,15 +35,12 @@ class Router
             'recovery-data-hdd.html' => array('id' => 22, 'controller' => 'main', 'action' => 'default'),
             'poradok_rabot.html' => array('id' => 25, 'controller' => 'main', 'action' => 'default'),
         );
-        if (isset($pages[$url])) {
-            $this->controller = $pages[$url]['controller'];
-            $this->action = $pages[$url]['action'];
-            $this->id = $pages[$url]['id'];
-        } else {
-            $this->controller = $pages['index.html']['controller'];
-            $this->action = $pages['index.html']['action'];
-            $this->id = $pages['index.html']['id'];
-        }
+        if (isset($routes[$url])) {
+            $this->controller = $routes[$url]['controller'];
+            $this->action = $routes[$url]['action'];
+            $this->id = $routes[$url]['id'];
+        };
+
         $this->controller = ucfirst($this->controller);
         $this->action = strtolower($this->action);
 

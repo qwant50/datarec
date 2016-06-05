@@ -30,7 +30,7 @@
 
     <nav id="horizontal">
         <ul id="nav">
-            <li><a href="index.html">главная</a></li>
+            <li><a href="http://www.datarec.com.ua/index.html">главная</a></li>
             <li><a href="news.html">новости</a></li>
             <li><a href="articles.html">статьи</a></li>
             <li><a href="certificates.html">патент</a></li>
@@ -65,23 +65,16 @@
         }
         ?>
         <img class="devider"/>
+        <p>Бесплатная доставка изделий в сервисный центр:</p>
         <form id="contacts" action="delivery.php" method="post" onsubmit="return send_message(this);">
 
             <div><input class="delivery" placeholder="Ваше имя *"></div>
             <div><input class="delivery" placeholder="Телефон *"></div>
             <div><input class="delivery" type="text" name="mail" placeholder="e-mail"></div>
             <div><textarea class="delivery" name="text" rows="6" placeholder="Комментарий"></textarea></div>
-            <div><input type="submit" name="submit" value="Заказать доставку"></div>
+            <div><input type="submit" name="submit" value="Вызвать курьера"></div>
         </form>
         <img class="devider"/>
-        <?php
-        if ($data['id'] == 20) {
-            echo '<p align = "center" class="fontLarge"><a href = "poradok_rabot.html" ><b>порядок проведения работ</b><br></a>
-                 /сроки, цена, проверка результата, оплата, доставка /<p><br><img class="devider" />';
-        };
-
-        ?>
-
 
         <h2>Наши магазины</h2>
 

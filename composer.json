@@ -13,8 +13,8 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Qwant\\": "src/",
-      "Qwant\\Tests\\": "src/tests/"
+      "Qwant\\": "app/",
+      "Qwant\\Tests\\": "app/tests/"
     }
   },
   "license": "MIT"
