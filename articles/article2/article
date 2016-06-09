@@ -1,47 +1,47 @@
-<p style="background-color:#ECECEC;"><b>11.11.2009 Обзор производительности новых HDD с плотностью записи 500GB/пластину и 
-скоростью вращения шпинделя 7200rpm.</b></p>
-<p>С выходом на рынок новых моделей со скоростью 7200rpm и 500GB/plate мы провели тестирование на быстродействие и 
-предлагаем Вам ознакомиться с результатами:</p>
+<p style="background-color:#ECECEC;"><b>11.11.2009 Обзор производительности новых HDD с плотностью записи 500GB/пластину и
+        скоростью вращения шпинделя 7200rpm.</b></p>
+<p>С выходом на рынок новых моделей со скоростью 7200rpm и 500GB/plate мы провели тестирование на быстродействие и
+    предлагаем Вам ознакомиться с результатами:</p>
 <p align="right">Участники тестирования</p>
 <p align="center">
-<img src="articles/article2/HDDList.png" height="103" width="514" border="0"  />
+    <img src="articles/article2/HDDList.png" height="103" width="514" border="0"/>
 </p>
 <p align="right">Диаграммы чтения/записи</p>
 <p align="center">
-<img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD502HJ-r.png" height="496" width="572" border="0"  />
-<br><br><br>
-<img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD502HJ-w.png" height="496" width="572" border="0"  />
-<br><br><br>
-<img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD103SJ-r.png" height="496" width="572" border="0"  />
-<br><br><br>
-<img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD103SJ-w.png" height="496" width="572" border="0"  />
-<br><br><br>
-<img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD154UI-r.png" height="496" width="572" border="0"  />
-<br><br><br>
-<img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD154UI-w.png" height="496" width="572" border="0"  />
-<br><br><br>
-<img src="articles/article2/HDTune_Benchmark_WDC_WD15EADS-00P8B0-r.png" height="496" width="572" border="0"  />
-<br><br><br>
-<img src="articles/article2/HDTune_Benchmark_WDC_WD15EADS-00P8B0-w.png" height="496" width="572" border="0"  />
+    <img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD502HJ-r.png" height="496" width="572" border="0"/>
+    <br><br><br>
+    <img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD502HJ-w.png" height="496" width="572" border="0"/>
+    <br><br><br>
+    <img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD103SJ-r.png" height="496" width="572" border="0"/>
+    <br><br><br>
+    <img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD103SJ-w.png" height="496" width="572" border="0"/>
+    <br><br><br>
+    <img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD154UI-r.png" height="496" width="572" border="0"/>
+    <br><br><br>
+    <img src="articles/article2/HDTune_Benchmark_SAMSUNG_HD154UI-w.png" height="496" width="572" border="0"/>
+    <br><br><br>
+    <img src="articles/article2/HDTune_Benchmark_WDC_WD15EADS-00P8B0-r.png" height="496" width="572" border="0"/>
+    <br><br><br>
+    <img src="articles/article2/HDTune_Benchmark_WDC_WD15EADS-00P8B0-w.png" height="496" width="572" border="0"/>
 </p>
 
 <p align="center">
-Сводная таблица производительности чтения/записи MB/s<br>
-<img src="articles/article2/CollapseRW.png" height="299" width="675" border="0"  />
-<br><br>
+    Сводная таблица производительности чтения/записи MB/s<br>
+    <img src="articles/article2/CollapseRW.png" height="299" width="675" border="0"/>
+    <br><br>
 
-<img src="articles/article2/IOMeter.png" height="282" width="574" border="0"  />
+    <img src="articles/article2/IOMeter.png" height="282" width="574" border="0"/>
 </p>
-<p align="justify"> А вот по количеству операций ввода/вывода ситуация не столь однозначна. Накопитель Samsung HD502HJ как и ожидалось 
-показал достаточно высокую производительность, а вот HD103SJ оказался на последней позиции. Нами были протестированы 4 
-накопителя этой модели, все тесты проводились по 3 раза, результат брался усредненный, но во всех случаях производительность
-оставалась одинаково низкой. Возможно это связано с сыроватой прошивкой и остается надеяться, что компания Samsung Исправит
-этот недочет и мы получим великолепный накопитель.
+<p align="justify"> А вот по количеству операций ввода/вывода ситуация не столь однозначна. Накопитель Samsung HD502HJ как и ожидалось
+    показал достаточно высокую производительность, а вот HD103SJ оказался на последней позиции. Нами были протестированы 4
+    накопителя этой модели, все тесты проводились по 3 раза, результат брался усредненный, но во всех случаях производительность
+    оставалась одинаково низкой. Возможно это связано с сыроватой прошивкой и остается надеяться, что компания Samsung Исправит
+    этот недочет и мы получим великолепный накопитель.
 </p>
 <p align="left"><b>Выводы</b></p>
 <p align="justify">
-HD502HJ показал наивысшую производительность ввода/вывода и линейного чтения что делает его идеальным решением для 
-системного диска.
+    HD502HJ показал наивысшую производительность ввода/вывода и линейного чтения что делает его идеальным решением для
+    системного диска.
 </p>
 
 <br>
