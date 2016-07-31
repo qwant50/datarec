@@ -6,21 +6,22 @@
     <meta name="keywords" content="<?= $data['keywords'] ?>"/>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css2" rel="stylesheet"
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 
 <body>
-<div id="wrapper">
+<div id="wrapper" class="container">
 
-    <div id="banner">
+    <div id="banner" class="row visible-lg-block">
         <div id="banner_left">
-            <h1>Центр Восстановления Данных</h1>
+            <h1><b>Центр Восстановления Данных</b></h1>
 
-            <h2>Восстанавливаем данных с HDD, SSD, Flash-накопителей.<br>Восстановление данных с RAID массивов.</h2>
+            <h2><b>Восстановление данных с HDD, SSD, Flash-накопителей.<br>Восстановление данных с RAID массивов.</b></h2>
         </div>
         <div id="contactInfo">
             <div id="cont"><span id="phone">(067) 557-88-57<br>(095) 432-00-06</span><br><span id="skype">Skype:<br>Datarec-Ukraine</span></div>
@@ -28,92 +29,147 @@
         </div>
     </div>
 
-    <nav id="horizontal">
+    <nav id="horizontal" class="row visible-lg-block">
         <ul id="nav">
-            <li><a href="http://www.datarec.com.ua/index.html">главная</a></li>
-            <li><a href="news.html">новости</a></li>
-            <li><a href="articles.html">статьи</a></li>
-            <li><a href="certificates.html">патент</a></li>
-            <li><a href="service.html">СЕРВИС</a></li>
-            <li><a href="price.html">Цены</a></li>
-            <li><a href="photo.html">Фотогалерея</a></li>
-            <li><a href="contacts.html">контакты</a></li>
+            <li><a href="/index.html">главная</a></li>
+            <li><a href="/news.html">новости</a></li>
+            <li><a href="/articles.html">статьи</a></li>
+            <li><a href="/certificates.html">патент</a></li>
+            <li><a href="/service.html">СЕРВИС</a></li>
+            <li><a href="/price.html">Цены</a></li>
+            <li><a href="/photo.html">Фотогалерея</a></li>
+            <li><a href="/contacts.html">контакты</a></li>
         </ul>
     </nav>
 
-    <div id="rightcol">
+    <div class="row hidden-lg mobile-header">
+        <!--        <div id="banner_left">
+                    <h1><b>Центр Восстановления Данных</b></h1>
 
-        <?php
+                    <h2><b>Восстановление данных с HDD, SSD, Flash-накопителей.<br>Восстановление данных с RAID массивов.</b></h2>
+                </div>
+                <div id="contactInfo">
+                    <div id="cont"><span id="phone">(067) 557-88-57<br>(095) 432-00-06</span><br><span id="skype">Skype:<br>Datarec-Ukraine</span></div>
+                    <div id="address">г. Харьков, пр. Ленина 48,<br> магазин Enter<br>(м.&nbsp;Ботанический сад)</div>
+                </div>-->
+        <div class="">
 
-        //если находимся в разделе статьи
-        if ($data['id'] == 3 || ($data['id'] >= 10 && $data['id'] < 20)) {
-            echo '<h2> Последние статьи </h2>';
+            <div class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="color: #000066" href="./index.html">Центр восстановления информации</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/index.html">главная</a></li>
+                            <li><a href="/news.html">новости</a></li>
+                            <li><a href="/articles.html">статьи</a></li>
+                            <li><a href="/certificates.html">патент</a></li>
+                            <li><a href="/service.html">СЕРВИС</a></li>
+                            <li><a href="/price.html">Цены</a></li>
+                            <li><a href="/photo.html">Фотогалерея</a></li>
+                            <li><a href="/contacts.html">контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-            $path = 'articles/articles_table.txt';
-            if (!file_exists($path)) {
-                echo '<p>Пока статей нет.</p>';
-            } else {
-                //выводим список статей в правой колонке
-                $lines = array_map('rtrim', file($path));
-                $count = count($lines);
-                foreach ($lines as $line):
-                    printf('<p class ="left"><a href="article%u.html">%s</a></p>', $count, $line);
-                    $count--;
-                endforeach;
-
-            };
-        }
-        ?>
-        <img class="devider"/>
-        <div>Бесплатная доставка изделий в сервисный центр:</div>
-        <form id="contacts" action="delivery.php" method="post" onsubmit="return delivery(this);">
-
-            <div><input class="delivery" value="+38(0" pattern="^\+38(0\d\d)\d\d\d\d\d\d\d$"  title="Телефон в формате: +38(0XX)XXXYYZZ" required autofocus></div>
-            <div><input class="delivery" placeholder="Ваше имя *"></div>
-            <div><input class="delivery" type="text" name="mail" placeholder="e-mail"></div>
-            <div><textarea class="delivery" name="text" rows="6" placeholder="Комментарий"></textarea></div>
-            <div><input type="submit" name="submit" value="Вызвать курьера"></div>
-        </form>
-        <img class="devider"/>
-
-        <h2>Наши магазины</h2>
-
-        <p><span class="fontLarge">Магазин <span class="enter">Enter</span></span><br>
-            <a href="//www.enter.biz.ua/">Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые
-                фотоаппараты, оргтехника и т.д.</p>
-        <img src="img/enterbaner.jpg" width="265"
-             alt="Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые фотоаппараты, оргтехника и т.д."/></a>
-        <img class="devider"/>
-
-        <p><span class="fontLarge">Магазин <span class="server">СЕРВЕР</span></span><br>
-            <a href="//server.kh.ua/">Оптово-розничная торговля компьютерной техникой</p>
-        <img src="img/serverbaner.jpg" height="50" width="260"
-             alt="Оптово-розничная торговля компьютерной техникой"/></a>
-        <img class="devider"/>
-
-        <p><span class="fontLarge">Компания <span class="dclink">DC-LINK</span></span><br>
-            <a href="//dclink.com.ua/">компьютеры, комплектующие, сети, цифровая техника</p>
-        <img src="img/dclink54.png" height="50" width="100"
-             alt="компьютеры, комплектующие, сети, цифровая техника"/></a>
-        <img class="devider"/>
-
-
-        <p><span class="fontLarge">Интернет-магазин <span class="cobra">Cobra</span></span><br>
-            <a href="//cobra.com.ua/">компьютеры и комплектующие</p>
-        <img src="img/cobra54.png" height="50" width="265"
-             alt="компьютеры и комплектующие"/></a>
-        <img class="devider"/>
-
-        <br>
-
+            </div>
+        </div>
     </div>
 
-    <div id="content">
-        <?= $data['content']; ?>
-    </div>
+    <div class="row">
 
-    <div class="clearfix"></div>
-    <footer>
+        <div id="content" class="col-lg-9">
+            <?= $data['content']; ?>
+        </div>
+
+        <div id="rightcol" class="col-lg-3">
+
+            <?php
+
+            //если находимся в разделе статьи
+            if ($data['id'] == 3 || ($data['id'] >= 10 && $data['id'] < 20)) {
+                echo '<h4> Последние статьи </h4>';
+
+                $path = 'articles/articles_table.txt';
+                if (!file_exists($path)) {
+                    echo '<p>Пока статей нет.</p>';
+                } else {
+                    //выводим список статей в правой колонке
+                    $lines = array_map('rtrim', file($path));
+                    $count = count($lines);
+                    foreach ($lines as $line):
+                        printf('<p class ="left"><a href="article%u.html">%s</a></p>', $count, $line);
+                        $count--;
+                    endforeach;
+
+                };
+            }
+            echo '<img class="devider"/>';
+            ?>
+            <div class="panel panel-primary">
+                <div class="panel-heading" align="left">Проверить состояние ремонта:</div>
+                <div class="panel-body"><input class="delivery" type="text" name="number" pattern="^\d+$" placeholder="введите номер ремонта"
+                                               required>
+                    <div>
+                        <button type="submit" class="btn btn-primary pull-right">проверить</button>
+                    </div>
+                </div>
+            </div>
+
+            <img class="devider"/>
+            <div id="dialog" title="Сведения о состоянии ремонта:">I'm a dialog</div>
+
+            <!--        <div>Бесплатная доставка изделий в сервисный центр:</div>
+                    <form id="getStatus" action="delivery.php" method="post" onsubmit="return delivery(this);">
+
+                        <div><input class="delivery" value="+38(0" pattern="^\+38(0\d\d)\d\d\d\d\d\d\d$"  title="Телефон в формате: +38(0XX)XXXYYZZ" required autofocus></div>
+                        <div><input class="delivery" placeholder="Ваше имя *"></div>
+                        <div><input class="delivery" type="text" name="mail" placeholder="e-mail"></div>
+                        <div><textarea class="delivery" name="text" rows="6" placeholder="Комментарий"></textarea></div>
+                        <div><input type="submit" name="submit" value="Вызвать курьера"></div>
+                    </form>
+                    <img class="devider"/>-->
+
+            <h4>Наши магазины</h4>
+
+            <p><span class="fontLarge">Магазин <span class="enter">Enter</span></span><br>
+                <a href="//www.enter.biz.ua/">Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые
+                    фотоаппараты, оргтехника и т.д.</p>
+            <img src="img/enterbaner.jpg" width="265"
+                 alt="Компьютеры, комплектующие, ноутбуки, Hi-Fi аппаратура, цифровые фотоаппараты, оргтехника и т.д."/></a>
+            <img class="devider"/>
+
+            <p><span class="fontLarge">Магазин <span class="server">СЕРВЕР</span></span><br>
+                <a href="//server.kh.ua/">Оптово-розничная торговля компьютерной техникой</p>
+            <img src="img/serverbaner.jpg" height="50" width="260"
+                 alt="Оптово-розничная торговля компьютерной техникой"/></a>
+            <img class="devider"/>
+
+            <p><span class="fontLarge">Компания <span class="dclink">DC-LINK</span></span><br>
+                <a href="//dclink.com.ua/">компьютеры, комплектующие, сети, цифровая техника</p>
+            <img src="img/dclink54.png" height="50" width="100"
+                 alt="компьютеры, комплектующие, сети, цифровая техника"/></a>
+            <img class="devider"/>
+
+
+            <p><span class="fontLarge">Интернет-магазин <span class="cobra">Cobra</span></span><br>
+                <a href="//cobra.com.ua/">компьютеры и комплектующие</p>
+            <img src="img/cobra54.png" height="50" width="265"
+                 alt="компьютеры и комплектующие"/></a>
+            <img class="devider"/>
+
+            <br>
+
+        </div>
+
+    </div>
+    <footer class="row">
         <p>Логотипы, торговые марки и прочие зарегистрированные знаки принадлежат их правообладателям.
             <br>
             Использование любых материалов, размещённых на сайте, разрешается при условии ссылки на www.datarec.com.ua.<br>
@@ -144,6 +200,10 @@
 
 </div>
 <script src="scripts/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="scripts/scripts.js"></script>
+<!--<script src="//s3.amazonaws.com/js-cache/b8d219ec19dd7861e2.js"></script>-->
 </body>
 </html>
