@@ -9,34 +9,12 @@ body {
     height: 100%;
 }
 
-
 #wrapper {
     min-height: 100% ;
-   // text-align: left;
     background-color: #FFFFFF;
     margin: 10px auto;
     position: relative;
     padding-bottom: 85px;
-}
-
-.mobile-header {
-}
-
-.nav-mobile {
-    background-color: #000066;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 0;
-    line-height: 0.8em;
-    color: #900;
-}
-
-.nav-li {
-    margin: 0;
-    padding: 0 30px 0 17px;
-    line-height: 0.8em;
-    list-style-type: none;
-    background: url(../img/menu_marker.gif) no-repeat 0;
 }
 
 #banner {
@@ -55,7 +33,6 @@ body {
     padding: 0 0 0 140px;
     margin: 0;
     line-height: 1.4em;
-    letter-spacing: 0;
 }
 
 h2 {
@@ -68,7 +45,6 @@ h2 {
 h4 {
     color: #900;
     padding: 0;
-    margin: 20px;
 }
 
 #banner_left h2 {
@@ -113,13 +89,11 @@ h4 {
 #horizontal {
     height: 37px;
     text-align: left;
- //   margin: 0;
-    padding: 0px 22px;
+    padding: 0 22px;
     background: url(../img/menu_bg2.jpg) no-repeat 0;
 }
 
 #nav {
-  //  font-size: 80%;
     font-weight: bold;
     margin: 10px 0;
     padding: 0;
@@ -134,6 +108,11 @@ h4 {
     line-height: 0.8em;
     list-style-type: none;
     background: url(../img/menu_marker.gif) no-repeat 0;
+}
+
+.navbar a{
+    text-decoration: none;
+
 }
 
 #nav a {
@@ -153,8 +132,6 @@ h4 {
 }
 
 #rightcol {
-  //  width: 265px;
-  //  float: right;
     font-size: 90%;
     text-align: center;
     margin: 15px 0;
@@ -195,24 +172,10 @@ h4 {
     margin: 10px 0;
     border: 0;
     height: 1px;
-    width: 261px;
+    width: 100%;
     background: url(../img/right_delim.gif);
 }
 
-#content {
-  //  margin-right: 295px;
- //   border-right: #BFBFBF 1px dashed;
-}
-
-#content ul {
- //   font-size: 80%;
-    margin: 0 30px;
-}
-
-ul {
- //   font-size: 80%;
-    margin: 0 25px;
-}
 
 strong {
     color: #039;
@@ -221,6 +184,7 @@ strong {
 
 a {
     color: #0000FF;
+    text-decoration: underline;
 }
 
 a:visited {
@@ -248,6 +212,8 @@ footer p {
 }
 
 /* #####################                PRICE TABLICA                     ##############################*/
+
+
 
 th.price {
     text-align: center;
@@ -291,7 +257,6 @@ th.price {
 }
 
 #price-table {
-    width: 100%;
     margin: 0 0 40px;
     border-collapse: collapse;
     border: 1px solid #dedcdc;
@@ -411,8 +376,37 @@ th.price {
     font-size: 80%;
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
     .container {
         width: 1200px;
+    }
+}
+
+@media (min-width : 992px) {
+
+    #content ul {
+        margin: 0 30px;
+    }
+
+    ul {
+        margin: 0 25px;
+    }
+
+    h4 {
+        color: #900;
+        padding: 0;
+        margin: 20px;
+    }
+
+    #price-table {
+        margin: 0 15px 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-nav > li > a {
+        border-right: 0;
+        border-bottom: 1px solid rgba(69, 74, 84, .4);
+
     }
 }

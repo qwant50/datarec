@@ -5,15 +5,17 @@
     <a href="poradok_rabot.html">Порядок проведения работ (сроки, проверка результата, оплата, доставка)</a> </p>
 
 
-<p>
-<div style="margin: 0px 15px 0px 15px;">
-    <table cellpadding="0" cellspacing="0" id="price-table"><tbody><tr>
-			       <th class="descr">Наименование и описание</th>
-			       <th class="price">Цена в грн</th>
-                               </tr><tr>
+<table cellpadding="0" cellspacing="0" id="price-table">
+    <thead>
+    <tr>
+        <th class="descr">Наименование и описание</th>
+        <th class="price">Цена в грн</th>
+    </tr>
+    </thead>
+<tbody>
+    <tr>
+<td colspan="2" style="font-size: 15px;"><strong>	Восстановление информации с жесткого диска	</strong></td></tr><tr>
 
-<td><strong>	Восстановление информации с жесткого диска	</strong></td><td class="price"></td></tr><tr>		
-				
 <td>	Диагностика	</td><td class="price">	БЕСПЛАТНО	</td></tr><tr>
 <td>	Восстановление данных с исправного HDD	</td><td class="price">	700	</td></tr><tr>
 
@@ -27,7 +29,7 @@
 
 <td>	Восстановление данных с RAID массива	</td><td class="price">	2500	</td></tr><tr>
 <td>	Восстановление данных с неисправного HDD с перестановкой блока магнитных головок	</td><td class="price">	2500	</td></tr><tr>
-<td style="font-size: 15px;"><strong>	Восстановление информации с USB Flash-накопителей и карт памяти (SD, microSD, CompactFlash, MMC, Memory Stick, ...)</strong></td><td class="price"></td></tr><tr>		
+<td colspan="2" style="font-size: 15px;"><strong>	Восстановление информации с USB Flash-накопителей и карт памяти (SD, microSD, CompactFlash, MMC, Memory Stick, ...)</strong></td></tr><tr>
 <td>	С исправных накопителей (после форматирования, с логическими разрушениями)	</td><td class="price">	550	</td></tr><tr>
 <td>	С неисправных накопителей (не монолитов) объемом:</td><td class="price">		</td></tr><tr>
 <td>	&nbsp;&nbsp;&nbsp;1-4 GB	</td><td class="price">	1200	</td></tr><tr>
@@ -45,19 +47,13 @@
 <td>	&nbsp;&nbsp;&nbsp;64 GB	</td><td class="price">	1600	</td></tr><tr>
 <td>	&nbsp;&nbsp;&nbsp;>64 GB	</td><td class="price">	1700	</td></tr><tr>
 
-<td style="font-size: 15px;"><strong>	Восстановление информации с SSD накопителей</strong></td><td class="price"></td></tr><tr>		
+<td colspan="2" style="font-size: 15px;"><strong>	Восстановление информации с SSD накопителей</strong></td></tr><tr>
 <td>	Восстановление данных с исправного SSD	</td><td class="price">	650	</td></tr><tr>
 <td>	Восстановление данных с неисправного SSD	</td><td class="price">	1200	</td></tr><tr>
-<td style="font-size: 15px;"><strong>	Восстановление данных с мобильного телефона/смартфона/планшетного ПК</strong></td><td class="price"></td></tr><tr>	
+<td colspan="2" style="font-size: 15px;"><strong>	Восстановление данных с мобильного телефона/смартфона/планшетного ПК</strong></td></tr><tr>
 <td>	Восстановление данных с мобильного телефона/смартфона/планшетного ПК	</td><td class="price">	1300	</td></tr><tr>
 <td>	&nbsp	</td><td class="price">	&nbsp	</td></tr><tr>
-<td>	Сохранение восстановленных данных на носитель заказчика, отправка через Internet	</td><td class="price">	БЕСПЛАТНО	</td></tr><tr>
-    
-  
-   
-
-
+<td>	Сохранение восстановленных данных на носитель заказчика, отправка через Internet	</td><td class="price">	БЕСПЛАТНО	</td></tr>
+</tbody>
     </table>
-</div>
-
-</p>
+<br>
