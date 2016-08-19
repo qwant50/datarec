@@ -17,14 +17,9 @@ $('#content img').on('click', function () {
     window.open(src, "Image", "width=" + width + ",height=" + height);
 });
 
-$("#dialog").dialog({
-    autoOpen: false,
-    width: 500
-});
-
 $('button[type=submit]').click(function () {
     var val = $('input[name=number]').val();
-    $('#dialog').dialog("option", "title", 'Сведение о состоянии ремонта № ' + val);
+    $('.modal-title', '#repairModal').html('Сведение о состоянии ремонта № ' + val);
     $.ajax({
         method: "POST",
         url: "http://admin.datarec.com.ua/admin/repair/getstatus",
@@ -38,8 +33,8 @@ $('button[type=submit]').click(function () {
             else {
                 rep = 'Статус: готово <br> Дата завершения: ' + res.repaired_at;
             }
-            $('#dialog').html('Изделие: ' + res.device + '<br>' + rep);
-            $("#dialog").dialog("open");
+            $('.modal-body', '#repairModal').html('Изделие: ' + res.device + '<br>' + rep);
+            $('#repairModal').modal('show');
         })
         .fail(function () {
             alert("error");
