@@ -114,8 +114,9 @@
             ?>
             <div class="panel panel-primary">
                 <div class="panel-heading" align="left">Проверить состояние ремонта:</div>
-                <div class="panel-body"><input class="delivery" type="text" name="number" pattern="^\d+$" placeholder="введите номер ремонта"
-                                               required>
+                <div class="panel-body">
+                    <input class="delivery" type="text" name="number" pattern="^\d+$" placeholder="номер ремонта" required>
+                    <input class="delivery" type="text" name="secret" pattern="^[a-zA-Z0-9]{4}$" placeholder="секретный код" required>
                     <div>
                         <button type="submit" class="btn btn-primary pull-right">проверить</button>
                     </div>

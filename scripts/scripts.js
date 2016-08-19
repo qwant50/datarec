@@ -17,31 +17,64 @@ $('#content img').on('click', function () {
     window.open(src, "Image", "width=" + width + ",height=" + height);
 });
 
+function showModal(title, body) {
+    $modal = $('#repairModal');
+    $('.modal-title', $modal).html(title);
+    $('.modal-body', $modal).html(body);
+    $($modal).modal('show');
+}
+
 $('button[type=submit]').click(function () {
     var val = $('input[name=number]').val();
-    $('.modal-title', '#repairModal').html('Сведение о состоянии ремонта № ' + val);
+    var secret = $('input[name=secret]').val();
+    var error = '';
+    if (!val) {
+        error = 'Введите, пожалуйста, номер ремонта';
+    }
+    else if (!val.match(/^\d+$/)) {
+        error = 'Номер ремонта должен содержать только цифры.';
+    }
+    else if (!secret) {
+        error = 'Введите, пожалуйста, секретный код.';
+    }
+    else if (!secret.match(/^[a-zA-Z0-9]{4}$/)) {
+        error = 'Секретный код должен состоять из четырех знаков.';
+    }
+    if (error) {
+        showModal('Внимание! Введенные данные некорректны.', error);
+        return;
+    }
     $.ajax({
         method: "POST",
         url: "http://admin.datarec.com.ua/admin/repair/getstatus",
         dataType: "json",
-        data: {'id': val}
+        data: {'id': val, 'secret': secret}
     }).done(function (res) {
-            var rep = '';
+            if (!res || res.error) {
+                showModal('Внимание! Введенные данные некорректны.', res.error);
+                return;
+            }
+            var rep = 'Изделие: ' + res.device;
+            rep += '<br>Серийный номер: ' + (res.sn ? res.sn : 'N/A');
             if (res.repaired_at === null) {
-                rep = 'Статус: не готово';
+                rep += '<br>Статус: <span style="color: red">не готово</span>';
             }
             else {
-                rep = 'Статус: готово <br> Дата завершения: ' + res.repaired_at;
+                rep += '<br>Статус: <span style="color: green">готово</span> <br> Дата завершения: ' + res.repaired_at;
             }
-            $('.modal-body', '#repairModal').html('Изделие: ' + res.device + '<br>' + rep);
-            $('#repairModal').modal('show');
+            if (res.description_online) {
+                rep += '<br>Комментарий: ' + res.description_online;
+            }
+            if (res.price) {
+                rep += '<br>К оплате: <span style="color: green">' + res.price + '</span> грн.';
+            }
+            if (res.extradited_at) {
+                rep += '<br><b>Внимание!</b> Изделие выдано: ' + res.extradited_at;
+            }
+            showModal('Сведение о состоянии ремонта № ' + val, rep);
         })
         .fail(function () {
-            alert("error");
-        })
-        .always(function (res) {
-            console.log(res);
-            //  alert(res);
+            showModal('Внимание! Ошибка работы программы.', 'Проверьте соединение с Internet и повторите попытку.');
         });
 
 });
