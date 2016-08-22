@@ -46,17 +46,17 @@ $('button[type=submit]').click(function () {
     }
     $.ajax({
         method: "POST",
-        url: "http://admin.datarec.com.ua/admin/repair/getstatus",
+        url: "//admin.datarec.com.ua/admin/repair/getstatus",
         dataType: "json",
         data: {'id': val, 'secret': secret}
-    }).done(function (res) {
+    }).done((res) => {
             if (!res || res.error) {
                 showModal('Внимание! Введенные данные некорректны.', res.error);
                 return;
             }
             var rep = 'Изделие: ' + res.device;
             rep += '<br>Серийный номер: ' + (res.sn ? res.sn : 'N/A');
-            if (res.repaired_at === null) {
+            if (!res.repaired_at) {
                 rep += '<br>Статус: <span style="color: red">не готово</span>';
             }
             else {
@@ -73,8 +73,5 @@ $('button[type=submit]').click(function () {
             }
             showModal('Сведение о состоянии ремонта № ' + val, rep);
         })
-        .fail(function () {
-            showModal('Внимание! Ошибка работы программы.', 'Проверьте соединение с Internet и повторите попытку.');
-        });
-
+        .fail(() => showModal('Внимание! Ошибка работы программы.', 'Проверьте соединение с Internet и повторите попытку.'));
 });

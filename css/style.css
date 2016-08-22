@@ -372,6 +372,10 @@ th.price {
     margin-bottom: 10px;
 }
 
+.w120 {
+    width: 120px;
+}
+
 .font80 {
     font-size: 80%;
 }
