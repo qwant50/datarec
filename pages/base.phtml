@@ -6,10 +6,10 @@
     <meta name="keywords" content="<?= $data['keywords'] ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset=utf-8"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
@@ -17,7 +17,7 @@
 <body>
 <div id="wrapper" class="container">
 
-    <div id="banner" class="row visible-lg-block">
+    <div id="banner" class="row visible-lg">
         <div id="banner_left">
             <h1><b>Центр Восстановления Данных</b></h1>
 
@@ -25,11 +25,11 @@
         </div>
         <div id="contactInfo">
             <div id="cont"><span id="phone">(067) 557-88-57<br>(095) 432-00-06</span><br><span id="skype">Skype:<br>Datarec-Ukraine</span></div>
-            <div id="address">г. Харьков, пр. Ленина 48,<br> магазин Enter<br>(м.&nbsp;Ботанический сад)</div>
+            <div id="address">г. Харьков, пр. Науки 48,<br> магазин Enter<br>(м.&nbsp;Ботанический сад)</div>
         </div>
     </div>
 
-    <nav id="horizontal" class="row visible-lg-block">
+    <nav id="horizontal" class="row visible-lg">
         <ul id="nav">
             <li><a href="/index.html">главная</a></li>
             <li><a href="/news.html">новости</a></li>
@@ -90,7 +90,7 @@
 
         <div id="rightcol" class="col-lg-3">
 
-            <?php
+            <?
 
             //если находимся в разделе статьи
             if ($data['id'] == 3 || ($data['id'] >= 10 && $data['id'] < 20)) {
@@ -216,8 +216,7 @@
 <!--<script src="//s3.amazonaws.com/js-cache/b8d219ec19dd7861e2.js"></script>-->
 
 <!-- RedConnect -->
-<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
-        src="https://web.redhelper.ru/service/main.js?c=qwantonline"></script>
+<script id="rhlpscrtg" charset="utf-8" async="async" src="https://web.redhelper.ru/service/main.js?c=datarecovery"></script>
 <div style="display: none"><a class="rc-copyright"
                               href="http://redconnect.ru">Сервис обратного звонка RedConnect</a></div>
 <!--/RedConnect -->
