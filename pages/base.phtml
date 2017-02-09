@@ -6,12 +6,12 @@
     <meta name="keywords" content="<?= $data['keywords'] ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset=utf-8"/>
+    <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet"/>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -97,9 +97,7 @@
                 echo '<h4> Последние статьи </h4>';
 
                 $path = 'articles/articles_table.txt';
-                if (!file_exists($path)) {
-                    echo '<p>Пока статей нет.</p>';
-                } else {
+                if (file_exists($path)) {
                     //выводим список статей в правой колонке
                     $lines = array_map('rtrim', file($path));
                     $count = count($lines);
@@ -107,7 +105,8 @@
                         printf('<p class ="left"><a href="article%u.html">%s</a></p>', $count, $line);
                         $count--;
                     endforeach;
-
+                } else {
+                    echo '<p>Пока статей нет.</p>';
                 };
                 echo '<img class="devider"/>';
             }
@@ -213,7 +212,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="scripts/scripts.js"></script>
-<!--<script src="//s3.amazonaws.com/js-cache/b8d219ec19dd7861e2.js"></script>-->
 
 <!-- RedConnect -->
 <script id="rhlpscrtg" charset="utf-8" async="async" src="https://web.redhelper.ru/service/main.js?c=datarecovery"></script>

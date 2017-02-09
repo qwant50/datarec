@@ -6,50 +6,50 @@
 //		return false;
 //	});
 //});
+$(function () {
 
+    $('#content img').on('click', function () {
+        var src = $(this).attr('src');
+        var image = new Image();
+        image.src = src;
+        var width = image.width;
+        var height = image.height;
+        window.open(src, "Image", "width=" + width + ",height=" + height);
+    });
 
-$('#content img').on('click', function () {
-    var src = $(this).attr('src');
-    var image = new Image();
-    image.src = src;
-    var width = image.width;
-    var height = image.height;
-    window.open(src, "Image", "width=" + width + ",height=" + height);
-});
+    function showModal(title, body) {
+        $modal = $('#repairModal');
+        $('.modal-title', $modal).html(title);
+        $('.modal-body', $modal).html(body);
+        $($modal).modal('show');
+    }
 
-function showModal(title, body) {
-    $modal = $('#repairModal');
-    $('.modal-title', $modal).html(title);
-    $('.modal-body', $modal).html(body);
-    $($modal).modal('show');
-}
-
-$('button[type=submit]').click(function () {
-    var val = $('input[name=number]').val();
-    var secret = $('input[name=secret]').val();
-    var error = '';
-    if (!val) {
-        error = 'Введите, пожалуйста, номер ремонта';
-    }
-    else if (!val.match(/^\d+$/)) {
-        error = 'Номер ремонта должен содержать только цифры.';
-    }
-    else if (!secret) {
-        error = 'Введите, пожалуйста, секретный код.';
-    }
-    else if (!secret.match(/^[a-zA-Z0-9]{4}$/)) {
-        error = 'Секретный код должен состоять из четырех знаков.';
-    }
-    if (error) {
-        showModal('Внимание! Введенные данные некорректны.', error);
-        return;
-    }
-    $.ajax({
-        method: "POST",
-        url: "//admin.datarec.com.ua/admin/repair/getstatus",
-        dataType: "json",
-        data: {'id': val, 'secret': secret}
-    }).done((res) => {
+    $('button[type=submit]').click(function () {
+        var val = $('input[name=number]').val();
+        var secret = $('input[name=secret]').val();
+        var error = '';
+        if (!val) {
+            error = 'Введите, пожалуйста, номер ремонта';
+        }
+        else if (!val.match(/^\d+$/)) {
+            error = 'Номер ремонта должен содержать только цифры.';
+        }
+        else if (!secret) {
+            error = 'Введите, пожалуйста, секретный код.';
+        }
+        else if (!secret.match(/^[a-zA-Z0-9]{4}$/)) {
+            error = 'Секретный код должен состоять из четырех знаков.';
+        }
+        if (error) {
+            showModal('Внимание! Введенные данные некорректны.', error);
+            return;
+        }
+        $.ajax({
+            method: "POST",
+            url: "//admin.datarec.com.ua/admin/repair/getstatus",
+            dataType: "json",
+            data: {'id': val, 'secret': secret}
+        }).done((res) => {
             if (!res || res.error) {
                 showModal('Внимание! Введенные данные некорректны.', res.error);
                 return;
@@ -73,5 +73,6 @@ $('button[type=submit]').click(function () {
             }
             showModal('Сведение о состоянии ремонта № ' + val, rep);
         })
-        .fail(() => showModal('Внимание! Ошибка работы программы.', 'Проверьте соединение с Internet и повторите попытку.'));
+            .fail(() => showModal('Внимание! Ошибка работы программы.', 'Проверьте соединение с Internet и повторите попытку.'));
+    });
 });
