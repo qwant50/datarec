@@ -4,13 +4,26 @@ use Qwant\helpers\Url;
 use Qwant\Router;
 use Qwant\View;
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+$hasMarker = file_exists('C:\dev-flag.marker');
+if ($hasMarker) {
+    define('YII_DEBUG', true);
+    define('YII_ENV', 'dev');
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    $domain = 'http://www.local-datarec.com.ua';
+
+} else {
+    define('YII_DEBUG', false);
+    define('YII_ENV', 'prod');
+    error_reporting(0);
+    ini_set('display_errors', 0);
+    $domain = 'http://www.datarec.com.ua';
+}
 
 define("ROOT", realpath(__DIR__) . DIRECTORY_SEPARATOR);
 require __DIR__ . '/vendor/autoload.php';
 
-Url::init('http://www.datarec.com.ua');
+Url::init($domain);
 
 $router = new Router();
 $router->init($_SERVER["REQUEST_URI"]);

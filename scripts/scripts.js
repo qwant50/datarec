@@ -46,16 +46,17 @@ $(function () {
         }
         $.ajax({
             method: "POST",
-            url: "//admin.datarec.com.ua/admin/repair/getstatus",
+            url: (YII_DEBUG ? 'http://www.local-admin.datarec.com.ua' : 'http://www.admin.datarec.com.ua') + '/admin/repair/getstatus',
+
             dataType: "json",
-            data: {'id': val, 'secret': secret}
+            data: {id: val, secret: secret}
         }).done((res) => {
             if (!res || res.error) {
                 showModal('Внимание! Введенные данные некорректны.', res.error);
                 return;
             }
             var rep = 'Изделие: ' + res.device;
-            rep += '<br>Серийный номер: ' + (res.sn ? res.sn : 'N/A');
+            rep += '<br>Серийный номер: ' + (res.sn || 'N/A');
             if (!res.repaired_at) {
                 rep += '<br>Статус: <span style="color: red">не готово</span>';
             }
@@ -70,6 +71,17 @@ $(function () {
             }
             if (res.extradited_at) {
                 rep += '<br><b>Внимание!</b> Изделие выдано: ' + res.extradited_at;
+            }
+
+            if (res.price && !res.extradited_at) {
+/*                rep += '<form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">' +
+                    '<input type="hidden" name="data" value="' + res.data + '" />' +
+                    '<input type="hidden" name="signature" value="8CZs6rMtBsxzLsECpibkCDNfOp8=" />' +
+                    '<input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />' +
+                    '</form>';*/
+                rep += '<form method="GET" accept-charset="utf-8" action="https://www.liqpay.com/ru/checkout/datarec">' +
+                    '<input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />' +
+                    '</form>';
             }
             showModal('Сведение о состоянии ремонта № ' + val, rep);
         })
