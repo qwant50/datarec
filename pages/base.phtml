@@ -1,6 +1,6 @@
 <script>
     'use strict';
-    var YII_DEBUG = <?= YII_DEBUG ? 1 : 0 ?>;
+    var YII_DEBUG = <?= file_exists('C:\dev-flag.marker') ? 1 : 0 ?>;
     console.log('YII_DEBUG', YII_DEBUG);
 </script>
 <!DOCTYPE html>

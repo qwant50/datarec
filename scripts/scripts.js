@@ -27,26 +27,26 @@ $(function () {
     $('button[type=submit]').click(function () {
         var val = $('input[name=number]').val();
         var secret = $('input[name=secret]').val();
-        var error = '';
+        var error = [];
         if (!val) {
-            error = 'Введите, пожалуйста, номер ремонта';
+            error.push('Введите, пожалуйста, номер ремонта');
         }
-        else if (!val.match(/^\d+$/)) {
-            error = 'Номер ремонта должен содержать только цифры.';
+        if (!val.match(/^\d+$/)) {
+            error.push('Номер ремонта должен содержать только цифры.');
         }
-        else if (!secret) {
-            error = 'Введите, пожалуйста, секретный код.';
+        if (!secret) {
+            error.push('Введите, пожалуйста, секретный код.');
         }
-        else if (!secret.match(/^[a-zA-Z0-9]{4}$/)) {
-            error = 'Секретный код должен состоять из четырех знаков.';
+        if (!secret.match(/^[a-zA-Z0-9]{4}$/)) {
+            error.push('Секретный код должен состоять из четырех знаков.');
         }
-        if (error) {
-            showModal('Внимание! Введенные данные некорректны.', error);
+        if (error.length) {
+            showModal('Внимание! Введенные данные некорректны.', error.join('<br>'));
             return;
         }
         $.ajax({
             method: "POST",
-            url: (YII_DEBUG ? 'http://www.local-admin.datarec.com.ua' : 'http://www.admin.datarec.com.ua') + '/admin/repair/getstatus',
+            url: (YII_DEBUG ? '//local-admin.datarec.com.ua' : '//admin.datarec.com.ua') + '/admin/repair/getstatus',
 
             dataType: "json",
             data: {id: val, secret: secret}
@@ -73,15 +73,15 @@ $(function () {
                 rep += '<br><b>Внимание!</b> Изделие выдано: ' + res.extradited_at;
             }
 
-            if (res.price && !res.extradited_at) {
+            if (res.price && res.repaired_at && !res.extradited_at) {
 /*                rep += '<form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">' +
                     '<input type="hidden" name="data" value="' + res.data + '" />' +
                     '<input type="hidden" name="signature" value="8CZs6rMtBsxzLsECpibkCDNfOp8=" />' +
                     '<input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />' +
                     '</form>';*/
-                rep += '<form method="GET" accept-charset="utf-8" action="https://www.liqpay.com/ru/checkout/datarec">' +
+                rep += '<br><div style="height: 60px;"><span>Оплатить on-line через систему Приват24: </span><span style="float: right"><form method="GET" accept-charset="utf-8" action="https://www.liqpay.com/ru/checkout/datarec">' +
                     '<input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />' +
-                    '</form>';
+                    '</form></span></div>';
             }
             showModal('Сведение о состоянии ремонта № ' + val, rep);
         })

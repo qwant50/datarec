@@ -1,4 +1,4 @@
-<?php
+<?
 
 namespace Qwant;
 
@@ -8,11 +8,16 @@ class Router
     private $action = 'default';
     private $id = 1;
 
-    public function init($url)
+    public function __construct()
+    {
+        $this->init($_SERVER["REQUEST_URI"]);
+    }
+
+    private function init($url)
     {
         $url = ltrim(trim($url), '/');
 
-        $routes = array(
+        $staticPages = array(
             'index.html' => array('id' => 1, 'controller' => 'main', 'action' => 'default'),
             'news.html' => array('id' => 2, 'controller' => 'main', 'action' => 'default'),
             'service.html' => array('id' => 4, 'controller' => 'main', 'action' => 'default'),
@@ -37,11 +42,14 @@ class Router
 
             'delivery.php' => array('id' => 26, 'controller' => 'ajax', 'action' => 'delivery'),
         );
-        if (isset($routes[$url])) {
-            $this->controller = $routes[$url]['controller'];
-            $this->action = $routes[$url]['action'];
-            $this->id = $routes[$url]['id'];
-        };
+        // searching for static pages
+        if (isset($staticPages[$url])) {
+            $this->controller = $staticPages[$url]['controller'];
+            $this->action = $staticPages[$url]['action'];
+            $this->id = $staticPages[$url]['id'];
+        } else {
+            // new style pages (dynamic)
+        }
 
         $this->controller = ucfirst($this->controller);
         $this->action = strtolower($this->action);

@@ -1,4 +1,4 @@
-<?php
+<?
 
 namespace Qwant;
 
@@ -12,7 +12,7 @@ class DbConnect
     private function __construct()
     {
         try {
-            $this->params = require dirname(__DIR__) . '/configs/db.php';
+            $this->params = require_once dirname(__DIR__) . '/configs/db.php';
             $this->connection = new \PDO(
                 "mysql:host={$this->params['host']};dbname={$this->params['dbname']};charset={$this->params['charset']}",
                 $this->params['username'],

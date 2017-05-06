@@ -22,12 +22,12 @@ class Url
      * @return string
      * @throws UrlException
      */
-    public static function route($page, array $params = array())
+    public static function route($page, array $params = [])
     {
         if (!is_string($page)) {
             throw new UrlException('Page must be a string.');
         }
         $ext = $page == '' ? '' : '.php';
-        return self::$domain . ltrim($page, '/') . $ext . (!empty($params) ? '?' . http_build_query($params) : '');
+        return self::$domain . ltrim($page, '/') . $ext . (empty($params) ? '' : '?' . http_build_query($params));
     }
 }
